@@ -1,0 +1,24 @@
+{
+  "name": "leocornus-visualdata",
+  "version": "0.0.1",
+  "description": "JavaScript libs to make data visulization simpler and easier!",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leocornus/leocornus-visualdata.git"
+  },
+  "keywords": [
+    "data",
+    "visulization",
+    "JavaScript"
+  ],
+  "author": "Sean Chen <sean.chen@leocorn.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/leocornus/leocornus-visualdata/issues"
+  },
+  "homepage": "https://github.com/leocornus/leocornus-visualdata#readme"
+}
