@@ -22,6 +22,12 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.7",
-    "d3": "~4.3.0"
+    "d3": "3.5.x",
+    "font-awesome": "~4.7.0",
+    "jsoneditor": "~5.5.10",
+    "clipboard": "~1.5.15"
+  },
+  "resolutions": {
+    "d3": "3.5.x"
   }
 }
