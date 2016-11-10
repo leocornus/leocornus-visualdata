@@ -1,6 +1,6 @@
 |npm-version|_ |npm-license|_ 
-
 |nodei|_
+
 leocornus-visualdata
 ====================
 
