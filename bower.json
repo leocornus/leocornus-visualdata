@@ -1,0 +1,23 @@
+{
+  "name": "leocornus-visualdata",
+  "description": "JavaScript libs to make data visulization simpler and easier!",
+  "main": "index.js",
+  "authors": [
+    "Sean Chen <sean.chen@leocorn.com>"
+  ],
+  "license": "GPL-2.0",
+  "keywords": [
+    "data",
+    "visulization",
+    "JavaScript"
+  ],
+  "homepage": "https://github.com/leocornus/leocornus-visualdata",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
