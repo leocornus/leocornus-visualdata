@@ -4,7 +4,7 @@
   "description": "JavaScript libs to make data visulization simpler and easier!",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/leocornus/leocornus-visualdata/issues"
   },
-  "homepage": "https://github.com/leocornus/leocornus-visualdata#readme"
+  "homepage": "https://github.com/leocornus/leocornus-visualdata#readme",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.30",
+    "serve-index": "^1.8.0"
+  }
 }
