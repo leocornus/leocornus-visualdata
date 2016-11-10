@@ -4,6 +4,8 @@ var express = require('express');
 var serveIndex = require('serve-index');
 var app = express();
 
+// list current folder's index too.
+app.use('/', serveIndex('.'));
 //load static files.
 app.use('/demo', express.static('demo'));
 app.use('/demo', serveIndex('demo'));
