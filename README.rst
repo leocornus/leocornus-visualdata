@@ -1,5 +1,4 @@
 |npm-version|_ |npm-license|_ 
-|nodei|_
 
 leocornus-visualdata
 ====================
@@ -18,6 +17,8 @@ It is very easy to get started to explore those cool demos::
   $ npm run express-app
 
 Then you could visit (http://localhost:8900/demo) for all examples.
+
+|nodei|_
 
 .. |npm-version| image:: https://img.shields.io/npm/v/leocornus-visualdata.svg
 .. _npm-version: https://www.npmjs.com/package/leocornus-visualdata
