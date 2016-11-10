@@ -1,0 +1,148 @@
+{
+  "attributes":{
+    "description":"World War II Total Deaths based on wikipedia page",
+    "dataSource":"https://en.wikipedia.org/wiki/World_War_II_casualties",
+    "colorRange": ["white", "hsl(228,30%,40%)"],
+    "leafFill": "lightgrey",
+    "imgRatio": 1.2,
+    "diameter": 500
+  },
+  "data":{
+    "name": "World War II",
+    "children" : [
+      {
+        "name": "World War II Total Deaths",
+        "children": [
+          {
+            "name": "Sovit Union - 27,000,000",
+            "children": [
+              {
+                "name":"Military 11,400,000",
+                "size": 11400000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg"
+              },
+              {
+                "name":"Civilian 16,000,000",
+                "size": 16000000,
+                "leafFill":"grey",
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg"
+              }
+            ]
+          },
+          {
+            "name": "Germany - 7,400,000",
+            "children": [
+              {
+                "name":"Military 5,318,000",
+                "size": 5318000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/7/7c/Flag_of_the_German_Reich_%281935%E2%80%931945%29.svg"
+              },
+              {
+                "name":"Civilian 3,000,000",
+                "leafFill":"grey",
+                "size": 3000000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/7/7c/Flag_of_the_German_Reich_%281935%E2%80%931945%29.svg"
+              }
+            ]
+          },
+          {
+            "name": "China - 20,000,000",
+            "children": [
+              {
+                "name":"Military 3,750,000",
+                "size": 3750000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg"
+              },
+              {
+                "name":"Civilian 18,191,000",
+                "leafFill":"grey",
+                "size": 18191000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg"
+              }
+            ]
+          },
+          {
+            "name": "Japan - 3,100,000",
+            "children": [
+              {
+                "name":"Military 2,300,000",
+                "size": 2300000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Japan_%281870-1999%29.svg"
+              },
+              {
+                "name":"Civilian 800,000",
+                "leafFill":"grey",
+                "size": 800000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Japan_%281870-1999%29.svg"
+              }
+            ]
+          },
+          {
+            "name": "United States - 419,400",
+            "children": [
+              {
+                "name":"Military 407,300",
+                "size": 407300,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+              },
+              {
+                "name":"Civilian 12,100",
+                "leafFill":"grey",
+                "size": 12100,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+              }
+            ]
+          },
+          {
+            "name": "United Kingdom - 450,900",
+            "children": [
+              {
+                "name":"Military 383,700",
+                "size": 383700,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+              },
+              {
+                "name":"Civilian 67,200",
+                "leafFill":"grey",
+                "size": 67200,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+              }
+            ]
+          },
+          {
+            "name": "Poland - 6,000,000",
+            "children": [
+              {
+                "name":"Military 240,000",
+                "size": 240000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Poland_%281928-1980%29.svg"
+              },
+              {
+                "name":"Civilian 5,820,000",
+                "leafFill":"grey",
+                "size": 5820000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Poland_%281928-1980%29.svg"
+              }
+            ]
+          },
+          {
+            "name": "Canada - 43,600",
+            "children": [
+              {
+                "name":"Military 42,000",
+                "size": 42000,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
+              },
+              {
+                "name":"Civilian 1,600",
+                "leafFill":"grey",
+                "size": 1600,
+                "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
