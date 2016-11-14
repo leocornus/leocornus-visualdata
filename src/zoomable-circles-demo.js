@@ -21,7 +21,11 @@ jQuery(document).ready(function($) {
         // remove the existing one.
         $('#svgpreview').empty();
         // rebuild the circles.
-        circleChart("#svgpreview", 20, 500, editor.get());
+        var options = {
+          "margin":20,
+          "diameter":500
+        };
+        $("#svgpreview").zoomableCircles(options, editor.get());
         // update the JSON source code.
         $('#jsonstring').html(JSON.stringify(editor.get()).
                               replace(/,/g, ',\n'));
@@ -34,7 +38,11 @@ jQuery(document).ready(function($) {
         $('#svgfullscreen').empty();
         var diameter = $('#fullscreenSize').val();
         // rebuild the circles.
-        circleChart("#svgfullscreen", 10, diameter, editor.get());
+        var options = {
+          "margin":10,
+          "diameter":diameter
+        };
+        $("#svgfullscreen").zoomableCircles(options, editor.get());
         // update the JSON source code.
         $('#jsonstring').html(JSON.stringify(editor.get()).
                               replace(/,/g, ',\n'));
@@ -71,14 +79,18 @@ function loadData(dataUrl, jsonEditor) {
     //$.getJSON('data/simple-zoomable-circle.json', function(data) {
         // set data to JSON editor.
         jsonEditor.set(data);
-        // remove the existing one.
-        $('#svgpreview').empty();
-        // build the circles...
-        circleChart("#svgpreview", 20, 500, jsonEditor.get());
-        //console.log(JSON.stringify(data));
         // update the JSON source code
         $('#jsonstring').html(JSON.stringify(data).
                               replace(/,/g, ',\n'));
+        // remove the existing one.
+        $('#svgpreview').empty();
+        // build the circles...
+        var options = {
+          "margin":10,
+          "diameter":500
+        };
+        $("#svgpreview").zoomableCircles(options, data);
+        //console.log(JSON.stringify(data));
     });
 }
 
