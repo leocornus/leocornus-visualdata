@@ -4,8 +4,7 @@
     "dataSource":"https://en.wikipedia.org/wiki/World_War_II_casualties",
     "colorRange": ["white", "hsl(228,30%,40%)"],
     "leafFill": "lightgrey",
-    "imgRatio": 1.2,
-    "diameter": 500
+    "imgRatio": 1.2
   },
   "data":{
     "name": "World War II",
