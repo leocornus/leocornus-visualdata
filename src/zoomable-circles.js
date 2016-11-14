@@ -142,7 +142,7 @@
             // process JSON data in pack layout to 
             // get positions of each node
             var root = self.circleData;
-            var focus = root;
+            self.focus = root;
             // TODO: pack nodes function?
             self.nodes = pack.nodes(root);
             self.view = [];
@@ -173,7 +173,7 @@
                 })
                 .on("click", function(d) {
 
-                    if (focus !== d) {
+                    if (self.focus !== d) {
                         self.zoom(d);
                         d3.event.stopPropagation();
                     }
@@ -233,7 +233,9 @@
             d3.select(selector)
                 // update background color.
                 .style("background", color(-1))
-                .on("click", function() { self.zoom(root); });
+                .on("click", function() { 
+                    self.zoom(root); 
+                });
 
             self.zoomTo([root.x, root.y, 
                          root.r * 2 + self.options.margin]);
@@ -246,14 +248,15 @@
 
             var self = this;
 
-            var focus0 = focus; focus = d;
+            var focus0 = self.focus; 
+            self.focus = d;
 
             var transition = d3.transition()
                 .duration(d3.event.altKey ? 7500 : 750)
                 .tween("zoom", function(d) {
                     var i = d3.interpolateZoom(self.view, 
-                             [focus.x, focus.y, 
-                              focus.r * 2 + self.options.margin]);
+                             [self.focus.x, self.focus.y, 
+                              self.focus.r * 2 + self.options.margin]);
                     return function(t) {
                         self.zoomTo(i(t));
                     };
@@ -261,26 +264,26 @@
 
             transition.selectAll("text")
                 .filter(function(d) {
-                    return d.parent === focus ||
+                    return d.parent === self.focus ||
                            this.style.display === "inline" ||
                            d.parent === focus0;
                 })
                 .style("fill-opacity", function(d) {
-                    return d.parent === focus ? 1 : 0.5;
+                    return d.parent === self.focus ? 1 : 0.5;
                 })
                 .each("start", function(d) {
-                    if (d.parent === focus) 
+                    if (d.parent === self.focus) 
                         this.style.display = "inline";
                 })
                 .each("end", function(d) {
-                    if (d.parent !== focus) 
+                    if (d.parent !== self.focus) 
                         this.style.display = "none";
                 });
 
             // logos are opaque at root level only
             transition.selectAll("use")
                 .style("opacity", function(d) {
-                    return focus.depth === 0 ? 1 : 0.8;
+                    return self.focus.depth === 0 ? 1 : 0.8;
                 });
         },
 
