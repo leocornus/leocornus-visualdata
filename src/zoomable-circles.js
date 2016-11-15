@@ -42,14 +42,18 @@
         return this.each(function() {
             // check the local storage index for the current
             // element.
-            if(!$.data(this, "plugin_" + pluginName)) {
+            var dataKey = "plugin_" + pluginName;
+            if(!$.data(this, dataKey)) {
                 // no plugin created yet, let create a new one.
-                $.data(this, "plugin_" + pluginName, 
+                $.data(this, dataKey, 
                        new Plugin(this, options, jsonData));
             } else{
                 // replace with new one.
-                $.data(this, "plugin_" + pluginName, 
-                       new Plugin(this, options, jsonData));
+                //$.data(this, "plugin_" + pluginName, 
+                //       new Plugin(this, options, jsonData));
+                // try reload for the existing plugin.
+                var plugin = $.data(this, dataKey);
+                plugin.reload(options, jsonData);
             }
         });
     };
@@ -66,6 +70,9 @@
 
             var self = this;
             var $element = $(this.element);
+
+            // save this id attribute.
+            self.attrId = $element.attr('id');
 
             //process the JSON data.
             // get the circle data from the data source.
@@ -88,11 +95,15 @@
         /**
          * test reload.
          */
-        reload: function(jsonData) {
+        reload: function(options, jsonData) {
 
-            console.log(jsonData);
+            //console.log(jsonData);
             var self = this;
-            self.jsonData = jsonData
+            // remove the existing one.
+            $('#' + self.attrId).empty();
+
+            self.options = options;
+            self.jsonData = jsonData;
             self.init();
         },
 
@@ -124,7 +135,7 @@
 
             // append <g> to <svg> to the <body>
             // crate the container circle as SVG element.
-            var selector = "#" + $element.attr('id');
+            var selector = "#" + self.attrId;
             self.svg = d3.select(selector).append("svg")
                 .attr("width", self.options.diameter)
                 .attr("height", self.options.diameter)
