@@ -27,8 +27,7 @@ jQuery(document).ready(function($) {
         };
         $("#svgpreview").zoomableCircles(options, editor.get());
         // update the JSON source code.
-        $('#jsonstring').html(JSON.stringify(editor.get()).
-                              replace(/,/g, ',\n'));
+        $('#jsonstring').html(JSON.stringify(editor.get(), null, 2));
     });
 
     // load the circles in full screen, using modal for now.
@@ -44,8 +43,7 @@ jQuery(document).ready(function($) {
         };
         $("#svgfullscreen").zoomableCircles(options, editor.get());
         // update the JSON source code.
-        $('#jsonstring').html(JSON.stringify(editor.get()).
-                              replace(/,/g, ',\n'));
+        $('#jsonstring').html(JSON.stringify(editor.get(), null, 2));
     });
 
     // remove the preview svg when closing the modal.
@@ -80,8 +78,7 @@ function loadData(dataUrl, jsonEditor) {
         // set data to JSON editor.
         jsonEditor.set(data);
         // update the JSON source code
-        $('#jsonstring').html(JSON.stringify(data).
-                              replace(/,/g, ',\n'));
+        $('#jsonstring').html(JSON.stringify(data, null, 2));
         // remove the existing one.
         $('#svgpreview').empty();
         // build the circles...
