@@ -102,7 +102,8 @@
             // remove the existing one.
             $('#' + self.attrId).empty();
 
-            self.options = options;
+            // need merge the options with default options.
+            self.options = $.extend({}, defaultOptions, options);
             self.jsonData = jsonData;
             self.init();
         },
