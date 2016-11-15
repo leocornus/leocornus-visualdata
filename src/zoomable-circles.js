@@ -196,7 +196,7 @@
                 .data(self.nodes)
                 .enter().append("symbol")
                 .attr("id", function(d, i) {
-                    return "img-" + i; 
+                    return self.attrId + "-img-" + i; 
                 })
                 // 'viewBox' to ensure entire image 
                 // shows in different circle size
@@ -221,7 +221,7 @@
                 .data(self.nodes)
                 .enter().append("use")
                 .attr("xlink:href", function(d, i) {
-                    return "#img-" + i; 
+                    return "#" + self.attrId + "-img-" + i; 
                 });
 
             // add <text> (the category labels)
