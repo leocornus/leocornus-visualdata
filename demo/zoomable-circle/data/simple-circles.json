@@ -1,0 +1,95 @@
+{
+  "attributes": {
+    "description": "Data example to show the data structure",
+    "colorRange": [
+      "white",
+      "hsl(228,30%,40%)"
+    ],
+    "leafFill": "lightgrey"
+  },
+  "data": {
+    "name": "Simple data for testing",
+    "children": [
+      {
+        "name": "Numbers 0 - 9",
+        "children": [
+          {
+            "name": "Numbers 0 - 4",
+            "children": [
+              {
+                "name": "Zero",
+                "size": 1000,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Cartoonmmm.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Numbers 0 - 9",
+        "children": [
+          {
+            "name": "Numbers 0 - 4",
+            "children": [
+              {
+                "name": "Zero",
+                "size": 1000,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Arrow_Compass_Orange.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Numbers 0 - 9",
+        "children": [
+          {
+            "name": "Numbers 0 - 9",
+            "children": [
+              {
+                "name": "Numbers 0 - 4",
+                "children": [
+                  {
+                    "name": "Zero",
+                    "size": 1000,
+                    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Dual_boot_icon.png"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Numbers 0 - 4",
+            "children": [
+              {
+                "name": "Numbers 0 - 9",
+                "children": [
+                  {
+                    "name": "Zero",
+                    "size": 1000,
+                    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Locomotive_TEM2M-063_2013_G1.jpg"
+                  },
+                  {
+                    "name": "Numbers 0 - 4",
+                    "children": [
+                      {
+                        "name": "Zero",
+                        "size": 1000,
+                        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Easter_Egg_Final.JPG"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Zero",
+                "size": 1000,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Arrow_Compass_Green.png"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
