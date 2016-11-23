@@ -1,0 +1,68 @@
+{
+  "attributes": {
+    "description": "Canada National Bird Vote results",
+    "colorRange": [
+      "white",
+      "hsl(228,30%,40%)"
+    ],
+    "leafFill": "white"
+  },
+  "data": {
+    "name": "National Bird Vote: The Top 5",
+    "children": [{
+      "name": "National Bird Vote: The Top 5",
+      "children": [
+        {
+          "name": "Gray jay 7918",
+          "children": [
+            {
+              "name": "Gray jay / Wiskey jack: 7918",
+              "size": 7918,
+              "imgUrl": "http://nationalbird.canadiangeographic.ca/images/birds/gray-jay.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Common loon 13995",
+          "children": [
+            {
+              "name": "Common loon: 13,995",
+              "size": 13995,
+              "imgUrl": "http://nationalbird.canadiangeographic.ca/images/birds/common-loon.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Snowy owl 8948",
+          "children": [
+            {
+              "name": "Snowy owl: 8,948",
+              "size": 8948,
+              "imgUrl": "http://nationalbird.canadiangeographic.ca/images/birds/snowy-owl.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Goose 3616",
+          "children": [
+            {
+              "name": "Canada goose: 3,616",
+              "size": 3616,
+              "imgUrl": "http://nationalbird.canadiangeographic.ca/images/birds/canada-goose.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Chickadee 3324",
+          "children": [
+            {
+              "name": "Black-apped chickadee: 3,324",
+              "size": 3324,
+              "imgUrl": "http://nationalbird.canadiangeographic.ca/images/birds/black-capped-chickadee.jpg"
+            }
+          ]
+        }
+      ]
+    }]
+  }
+}
