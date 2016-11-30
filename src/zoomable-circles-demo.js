@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
     $('#fullpage').on('click', function(e) {
 
         var filePath = $('#example').val();
-        var url = 'zoomable-circle-full.html?data=' + filePath;
+        var url = 'index-full.html?data=' + filePath;
         window.location.href = url;
     });
 
