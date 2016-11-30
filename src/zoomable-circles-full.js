@@ -9,7 +9,12 @@ jQuery(document).ready(function($) {
     diameter = diameter === undefined ? defaultDiameter : diameter;
     //$('#svgfull').html('file: ' + filePath);
     $.getJSON(filePath, function(data) {
-        circleChart('#svgfull', 20, diameter, data);
+        // rebuild the circles.
+        var options = {
+          "margin": 20,
+          "diameter": diameter
+        };
+        $("#svgfull").zoomableCircles(options, data);
     });
 });
 
