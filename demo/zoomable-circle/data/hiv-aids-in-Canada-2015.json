@@ -2,15 +2,15 @@
   "attributes": {
     "description": "Number of HIV cases by province/territory in Canada 2015",
     "colorRange": [
-      "white",
-      "hsl(228,30%,40%)"
+      "red",
+      "red"
     ],
-    "leafFill": "white"
+    "leafFill": "#f2cfdb"
   },
   "data": {
     "name": "Number of HIV cases in Canada 2015",
     "children": [{
-      "name": "2096 Cases of HIV diagnosed in 2015",
+      "name": "2,096 Cases of HIV diagnosed in 2015",
       "children": [
         {
           "name": "BC 239",
@@ -136,7 +136,7 @@
           "name": "NL",
           "children": [
             {
-              "name": "Newfoundland and Labrador: 1",
+              "name": "Newfoundland and Labrador: 11",
               "size": 11,
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Coat_of_Arms_of_Newfoundland_and_Labrador.svg"
             }
