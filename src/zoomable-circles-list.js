@@ -32,10 +32,12 @@ jQuery(document).ready(function($) {
                 colQueue = [];
             }
         }
+
         if(colQueue.length > 0) {
             visualList.append('<div class="row">' +
                 colQueue.join("") + '</div>');
         }
+
         $("div[id^='circle-']").each(function(index) {
 
             // get the id attribute.
@@ -45,6 +47,7 @@ jQuery(document).ready(function($) {
 
             // jQuery getJSON will read the file from a Web resources.
             $.getJSON(dataUrl, function(data) {
+                // TODO: update title, description, and source.
                 // build the circles...
                 var options = {
                   "margin":10,
