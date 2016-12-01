@@ -18,8 +18,10 @@ jQuery(document).ready(function($) {
                 '         data="' + dataList[i] + '">' +
                 '    </div>' +
                 '    <div class="caption">' +
-                '      <h3 id="title-' + i + '">Title</h3>' +
-                '      <p id="desc-' + i + '">Desc</p>' +
+                '      <h3 id="title-' + i + '">' +
+                dataList[i] + '</h3>' +
+                '      <p id="desc-' + i + '">' + 
+                dataList[i] + '</p>' +
                 '    </div>' +
                 '  </div>' +
                 '</div>';
@@ -48,6 +50,7 @@ jQuery(document).ready(function($) {
             // jQuery getJSON will read the file from a Web resources.
             $.getJSON(dataUrl, function(data) {
                 // TODO: update title, description, and source.
+                
                 // build the circles...
                 var options = {
                   "margin":10,
