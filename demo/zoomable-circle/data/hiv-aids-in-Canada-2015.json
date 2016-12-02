@@ -1,6 +1,8 @@
 {
   "attributes": {
+    "title": "HIV in Canada 2015",
     "description": "Number of HIV cases by province/territory in Canada 2015",
+    "dataSource": "http://healthycanadians.gc.ca/publications/diseases-conditions-maladies-affections/hiv-aids-surveillance-2015-vih-sida/index-eng.php",
     "colorRange": [
       "red",
       "red"

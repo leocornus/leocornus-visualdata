@@ -17,9 +17,15 @@ jQuery(document).ready(function($) {
                 '         data="' + dataList[i] + '">' +
                 '    </div>' +
                 '    <div class="caption">' +
-                '      <a href="" class="h3"' +
+                '      <a href="index-full.html?data=' +
+                dataList[i] + '"' +
+                '         class="h3"' +
                 '         id="' + circleId + '-title">' +
-                dataList[i] + '</a>' +
+                '        <span class="glyphicon' +
+                '                     glyphicon-fullscreen"' +
+                '               aria-hidden="true"></span> ' +
+                dataList[i] + 
+                '      </a>' +
                 '      <p id="' + circleId + '-desc">' + 
                 dataList[i] + '</p>' +
                 '    </div>' +

@@ -1,6 +1,8 @@
 {
   "attributes": {
+    "title": "Canada National Bird Vote",
     "description": "Canada National Bird Vote results",
+    "dataSource": "http://nationalbird.canadiangeographic.ca/",
     "colorRange": [
       "white",
       "hsl(228,30%,40%)"

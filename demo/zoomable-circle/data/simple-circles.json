@@ -1,5 +1,6 @@
 {
   "attributes": {
+    "title": "Simple circles",
     "description": "Data example to show the data structure",
     "colorRange": [
       "white",

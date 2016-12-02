@@ -1,6 +1,7 @@
 {
   "attributes":{
-    "description":"description for this data",
+    "title": "Technoloies in OPSpedia",
+    "description": "A list of technologies, frameworks, programming languages, databased used to build OPSpedia",
     "colorRange": ["hsl(129,80%,80%)", "hsl(228,30%,40%)"],
     "imgRatio": 1
   },
