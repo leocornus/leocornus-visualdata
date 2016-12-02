@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
 
-
     $.getJSON('data/list.json', function(data) {
 
         var visualList = $('#visuallist');
