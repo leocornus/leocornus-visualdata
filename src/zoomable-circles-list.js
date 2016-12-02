@@ -13,13 +13,13 @@ jQuery(document).ready(function($) {
             var theColumn = 
                 '<div class="col-sm-6 col-md-4">' +
                 '  <div class="thumbnail">' +
-                '    <div id="circle-' + i + '"' +
+                '    <div id="' + circleId + '"' +
                 '         data="' + dataList[i] + '">' +
                 '    </div>' +
                 '    <div class="caption">' +
-                '      <h3 id="title-' + i + '">' +
+                '      <h3 id="' + circleId + '-title">' +
                 dataList[i] + '</h3>' +
-                '      <p id="desc-' + i + '">' + 
+                '      <p id="' + circleId + '-desc">' + 
                 dataList[i] + '</p>' +
                 '    </div>' +
                 '  </div>' +
@@ -48,8 +48,18 @@ jQuery(document).ready(function($) {
 
             // jQuery getJSON will read the file from a Web resources.
             $.getJSON(dataUrl, function(data) {
-                // TODO: update title, description, and source.
-                
+                // TODO: update title, description, and data source.
+                if('attributes' in data) {
+                    if('title' in data.attributes) {
+                        $('#' + circleId + '-title').
+                            html(data.attributes.title);
+                    }
+                    if('description' in data.attributes) {
+                        $('#' + circleId + '-desc').
+                            html(data.attributes.description);
+                    }
+                }
+
                 // build the circles...
                 var options = {
                   "margin":10,
