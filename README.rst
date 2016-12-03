@@ -5,6 +5,11 @@ leocornus-visualdata
 
 JavaScript libraries to make data visualization simpler and easier.
 
+Live Demo
+=========
+
+`zoomable circles`_
+
 Quick Start
 ===========
 
@@ -26,3 +31,5 @@ Then you could visit (http://localhost:8900/demo) for all examples.
 .. _npm-license: https://www.npmjs.com/package/leocornus-visualdata
 .. |nodei| image:: https://nodei.co/npm/leocornus-visualdata.png?downloads=true&downloadRank=true&stars=true
 .. _nodei: https://nodei.co/npm/leocornus-visualdata
+
+.. _zoomable circles: http://seanchen.github.io/visual/zoomable-circle/index-list.html
