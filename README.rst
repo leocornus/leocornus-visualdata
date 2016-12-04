@@ -32,4 +32,4 @@ Then you could visit (http://localhost:8900/demo) for all examples.
 .. |nodei| image:: https://nodei.co/npm/leocornus-visualdata.png?downloads=true&downloadRank=true&stars=true
 .. _nodei: https://nodei.co/npm/leocornus-visualdata
 
-.. _zoomable circles: http://seanchen.github.io/visual/zoomable-circle/index-list.html
+.. _zoomable circles: https://seanchen.github.io/visual/zoomable-circle/index-list.html
