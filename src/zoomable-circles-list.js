@@ -17,15 +17,9 @@ jQuery(document).ready(function($) {
                 '         data="' + dataList[i] + '">' +
                 '    </div>' +
                 '    <div class="caption">' +
-                '      <a href="index-full.html?data=' +
-                dataList[i] + '"' +
-                '         class="h3"' +
-                '         id="' + circleId + '-title">' +
-                '        <span class="glyphicon' +
-                '                     glyphicon-fullscreen"' +
-                '               aria-hidden="true"></span> ' +
+                '      <h3 id="' + circleId + '-title">' +
                 dataList[i] + 
-                '      </a>' +
+                '      </h3>' +
                 '      <p id="' + circleId + '-desc">' + 
                 dataList[i] + '</p>' +
                 '    </div>' +
@@ -67,7 +61,7 @@ jQuery(document).ready(function($) {
                     }
                     if('dataSource' in data.attributes) {
                         var sourceLink =
-                          '<br/>' +
+                          '<br/><br/>' +
                           '<a href="' + data.attributes.dataSource +
                           '">' +
                           '<span class="glyphicon' +
@@ -78,7 +72,7 @@ jQuery(document).ready(function($) {
                             append(sourceLink);
                     } else {
                         $('#' + circleId + '-desc').
-                            append('<br/>');
+                            append('<br/><br/>');
                     }
                 }
 
