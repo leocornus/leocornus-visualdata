@@ -76,8 +76,22 @@ jQuery(document).ready(function($) {
                           ' Source of data</a>';
                         $('#' + circleId + '-desc').
                             append(sourceLink);
+                    } else {
+                        $('#' + circleId + '-desc').
+                            append('<br/>');
                     }
                 }
+
+                // append the full screen link
+                var fullPageLink = 
+                    '      <a href="index-full.html?data=' +
+                    dataUrl + '">' +
+                    '        <span class="glyphicon' +
+                    '                     glyphicon-fullscreen"' +
+                    '               aria-hidden="true"></span> ' +
+                    'Full page' + 
+                    '      </a>';
+                $('#' + circleId + '-desc').append(fullPageLink);
 
                 // build the circles...
                 var options = {
