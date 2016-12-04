@@ -84,13 +84,19 @@ jQuery(document).ready(function($) {
 
                 // append the full screen link
                 var fullPageLink = 
-                    '      <a href="index-full.html?data=' +
+                    ' <a href="index-full.html?data=' +
                     dataUrl + '">' +
-                    '        <span class="glyphicon' +
-                    '                     glyphicon-fullscreen"' +
-                    '               aria-hidden="true"></span> ' +
-                    'Full page' + 
-                    '      </a>';
+                    '   <span class="glyphicon' +
+                    '                glyphicon-fullscreen"' +
+                    '          aria-hidden="true"></span> ' +
+                    ' Full page' + 
+                    ' </a>' +
+                    ' <a href="index.html">' +
+                    '   <span class="glyphicon' +
+                    '                glyphicon-edit"' +
+                    '          aria-hidden="true"></span> ' +
+                    ' Customize' + 
+                    ' </a>';
                 $('#' + circleId + '-desc').append(fullPageLink);
 
                 // build the circles...
