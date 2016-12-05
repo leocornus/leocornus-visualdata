@@ -119,10 +119,23 @@
             // TODO: how to visually show the color range?
             // map domain -1 to 5 to color range of hsl(152,80%,80%) 
             // to hsl(228,30%,40%)
-            var color = d3.scale.linear()
-                .domain([-1, 5])
-                .range(self.options.colorRange)
-                .interpolate(d3.interpolateHcl);
+            //var color = d3.scale.linear()
+            //    .domain([-1, 2])
+            //    .range(self.options.colorRange)
+            //    .interpolate(d3.interpolateHcl);
+            // this is another solution to set the color range for
+            // the background color.
+            var color = function(depth) {
+
+                // depth -1 will be the background,
+                var index = depth < 0 ? 0 : depth;
+                // to make sure it is not exceed the color range.
+                if(index > self.options.colorRange.length - 1) {
+                    index = self.options.colorRange.length - 1;
+                }
+
+                return self.options.colorRange[index];
+            }
 
             // TODO: What's pack layout?
             // make pack layout for hierarchal layouts in D3, 
@@ -157,6 +170,7 @@
             self.focus = root;
             // TODO: pack nodes function?
             self.nodes = pack.nodes(root);
+            console.log(self.nodes);
             self.view = [];
 
             // selectAll says "map nodes[] to <circle>"; 
@@ -360,17 +374,17 @@
                     d3.transform(d3.select(this).attr("transform"));
                 //var parentTransform = 
                 // d3.transform(d3.select(this.parent).attr("transform"));
-                if(d.name === 'Ubuntu') {
-                    // d.r is the radius of the circle, 
-                    // half of the diameter
-                    console.log("max=" + d.r * 2 * k);
-                    // if d.r * 2 * k > diameter / 2,
-                    // that's the moment, when the solo 
-                    // circle is show up.
-                    console.log(self.view);
-                    console.log(i);
-                    console.log("k=" + k);
-                }
+                //if(d.name === 'Ubuntu') {
+                //    // d.r is the radius of the circle, 
+                //    // half of the diameter
+                //    console.log("max=" + d.r * 2 * k);
+                //    // if d.r * 2 * k > diameter / 2,
+                //    // that's the moment, when the solo 
+                //    // circle is show up.
+                //    console.log(self.view);
+                //    console.log(i);
+                //    console.log("k=" + k);
+                //}
 
                 var height = d3.select(this).attr("height");
                 var width = d3.select(this).attr("width");
