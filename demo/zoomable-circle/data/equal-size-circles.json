@@ -1,4 +1,15 @@
-{"name":"Virus Science Project October 2016",
+{
+  "attributes": {
+    "title": "12 Equal size circles",
+    "description": "Data example to show the data structure",
+    "colorRange": [
+      "white",
+      "hsl(228,30%,40%)"
+    ],
+    "leafFill": "lightgrey"
+  },
+  "data": {
+"name":"Virus Science Project October 2016",
 "children":[
   {"name":"The Copying problem",
    "children":[
@@ -83,3 +94,4 @@
     ]
   }
 ]}
+}

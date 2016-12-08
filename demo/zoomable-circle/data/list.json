@@ -4,6 +4,7 @@
     "data/canada-national-bird-vote.json",
     "data/opspedia-overview-in-circles.json",
     "data/world-war-ii-total-deaths.json",
-    "data/simple-circles.json"
+    "data/simple-circles.json",
+    "data/equal-size-circles.json"
   ]
 }
