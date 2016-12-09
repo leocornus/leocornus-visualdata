@@ -1,14 +1,28 @@
 jQuery(document).ready(function($) {
 
+    // initialize the clipboard on button copybtn
     new Clipboard('#copybtn');
-
     var container = document.getElementById('jsoneditor');
     // load the JSON editor
     var editor = new JSONEditor(container, {});
-    // get the URL to JSON file.
-    var dataUrl = $('#example').val();
-    // initially load the data.
-    loadData(dataUrl, editor);
+
+    // load the datalist:
+    $.getJSON('data/list.json', function(data) {
+    
+        var dataList = data.datalist;
+        // clear the demo data.
+        $('#example').html('');
+        for(i=0; i < dataList.length; i++) {
+            var option = '<option value="' + dataList[i] + '">' +
+                dataList[i] + '</option>';
+            $('#example').append(option);
+        }
+
+        // get the URL to JSON file.
+        var dataUrl = $('#example').val();
+        // initially load the data.
+        loadData(dataUrl, editor);
+    });
 
     // change examples .
     $('#example').change(function() {
