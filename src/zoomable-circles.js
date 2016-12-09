@@ -135,7 +135,7 @@
                 }
 
                 return self.options.colorRange[index];
-            }
+            };
 
             // TODO: What's pack layout?
             // make pack layout for hierarchal layouts in D3, 
@@ -273,6 +273,9 @@
         zoom: function(d) {
 
             var self = this;
+
+            $('#circle-info').html(d.name);
+            console.log(d);
 
             var focus0 = self.focus; 
             self.focus = d;
