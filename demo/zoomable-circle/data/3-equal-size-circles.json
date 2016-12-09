@@ -1,0 +1,44 @@
+{
+  "attributes": {
+    "title": "3 Equal size circles",
+    "description": "Data example to show the data structure",
+    "colorRange": [
+      "white",
+      "hsl(228,30%,40%)"
+    ],
+    "leafFill": "lightgrey"
+  },
+  "data": {
+    "name":"This will NOT show anywhere!",
+    "children":[
+      {"name":"Description for big circle",
+       "children":[
+
+          {"name":"01",
+           "children":[{
+              "name":"Circle One",
+              "size":1,
+              "imgRatio":1,
+              "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
+          },
+
+          {"name":"02",
+           "children":[{
+              "name":"Circle Two",
+              "size":1,
+              "imgRatio":1.1,
+              "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
+          },
+
+          {"name":"03",
+           "children":[{
+              "name":"Circle Three",
+              "size":1,
+              "imgRatio":1.15,
+              "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
+          }
+       ]
+      }
+    ]
+  }
+}
