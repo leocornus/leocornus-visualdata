@@ -6,5 +6,13 @@
     "data/world-war-ii-total-deaths.json",
     "data/simple-circles.json",
     "data/12-equal-size-circles.json"
+  ],
+  "labelList": [
+     "HIV and AIDS in Canada 2015",
+     "Canada national bird vote",
+     "OPSpedia Overview (Technology)",
+     "World War II Total deaths",
+     "Simple Circles",
+     "12 Equal Size Circles"
   ]
 }

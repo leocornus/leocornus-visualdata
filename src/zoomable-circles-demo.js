@@ -8,18 +8,19 @@ jQuery(document).ready(function($) {
 
     // load the datalist:
     $.getJSON('data/list.json', function(data) {
-    
+
         var dataList = data.datalist;
+        var labelList = data.labelList;
         // clear the demo data.
         $('#example').html('');
         for(i=0; i < dataList.length; i++) {
             var option = '<option value="' + dataList[i] + '">' +
-                dataList[i] + '</option>';
+                labelList[i] + '</option>';
             $('#example').append(option);
         }
 
         // get the URL to JSON file.
-        var dataUrl = $('#example').val();
+        var dataUrl = dataList[0];
         // initially load the data.
         loadData(dataUrl, editor);
     });
