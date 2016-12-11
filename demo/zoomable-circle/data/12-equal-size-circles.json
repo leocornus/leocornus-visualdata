@@ -17,7 +17,7 @@
           {"name":"01",
            "children":[{
               "name":"Circle One",
-              "size":1,
+              "size":1000,
               "imgRatio":1,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -25,7 +25,7 @@
           {"name":"02",
            "children":[{
               "name":"Circle Two",
-              "size":1,
+              "size":1000,
               "imgRatio":1.1,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -33,7 +33,7 @@
           {"name":"03",
            "children":[{
               "name":"Circle Three",
-              "size":1,
+              "size":1000,
               "imgRatio":1.15,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -41,7 +41,7 @@
           {"name":"04",
            "children":[{
               "name":"Circle Four",
-              "size":1,
+              "size":1000,
               "imgRatio":1.2,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -49,7 +49,7 @@
           {"name":"05",
            "children":[{
               "name":"Circle Five",
-              "size":1,
+              "size":1000,
               "imgRatio":1.25,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -57,7 +57,7 @@
           {"name":"06",
            "children":[{
               "name":"Circle Six",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -65,7 +65,7 @@
           {"name":"07",
            "children":[{
               "name":"Circle Seven",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -73,7 +73,7 @@
           {"name":"08",
            "children":[{
               "name":"Circle Eight",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -81,7 +81,7 @@
           {"name":"09",
            "children":[{
               "name":"Circle Nine",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -89,7 +89,7 @@
           {"name":"10",
            "children":[{
               "name":"Circle Ten",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -97,7 +97,7 @@
           {"name":"11",
            "children":[{
               "name":"Circle Eleven",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           },
@@ -105,7 +105,7 @@
           {"name":"12",
            "children":[{
               "name":"Circle Twelve",
-              "size":1,
+              "size":1000,
               "imgRatio":1.5,
               "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"}]
           }
