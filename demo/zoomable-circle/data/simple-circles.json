@@ -4,7 +4,9 @@
     "description": "Data example to show the data structure",
     "colorRange": [
       "white",
-      "hsl(228,30%,40%)"
+      "#175817",
+      "#35972c",
+      "#7abf4d"
     ],
     "leafFill": "lightgrey"
   },

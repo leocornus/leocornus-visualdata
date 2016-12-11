@@ -5,7 +5,7 @@
     "dataSource": "http://nationalbird.canadiangeographic.ca/",
     "colorRange": [
       "white",
-      "hsl(228,30%,40%)"
+      "#8b2d2d"
     ],
     "leafFill": "white"
   },
