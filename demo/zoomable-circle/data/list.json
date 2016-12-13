@@ -5,10 +5,11 @@
     "data/opspedia-overview-in-circles.json",
     "data/world-war-ii-total-deaths.json",
     "data/simple-circles.json",
+    "data/15-scale-size-circles.json",
     "data/16-equal-1-half-size-circles.json",
     "data/12-equal-size-circles.json",
     "data/12-minor-scale-size-circles.json",
-    "data/7-equal-size-circles.json"
+    "data/7-equal-size-circles.json",
     "data/3-equal-size-circles.json"
   ],
   "labelList": [
@@ -17,10 +18,11 @@
      "OPSpedia Overview (Technology)",
      "World War II Total deaths",
      "Simple Circles",
+     "15 Scale Size Cirecles",
      "16 + 1 Circles",
      "12 Equal Size Circles",
      "12 Minor Scale Size Circles",
-     "7 Equal Size Circles"
+     "7 Equal Size Circles",
      "3 Equal Size Circles"
   ]
 }

@@ -1,0 +1,180 @@
+{
+  "attributes": {
+    "title": "15 scale size circles with scale colors",
+    "description": "Data example to show the data structure",
+    "colorRange": [
+      "white"
+    ],
+    "leafFill": "green"
+  },
+  "data": {
+    "name": "This will NOT show anywhere!",
+    "children": [
+      {
+        "name": "0",
+        "children": [
+          {
+            "name": "0",
+            "size": 1000,
+            "leafFill": "#008000",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "1",
+        "children": [
+          {
+            "name": "1",
+            "size": 2000,
+            "leafFill": "#288000",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "children": [
+          {
+            "name": "2",
+            "size": 3000,
+            "leafFill": "#3d7f00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "children": [
+          {
+            "name": "3",
+            "size": 4000,
+            "leafFill": "#4f7e00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "4",
+        "children": [
+          {
+            "name": "4",
+            "size": 5000,
+            "leafFill": "#5f7d00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "5",
+        "children": [
+          {
+            "name": "5",
+            "size": 6000,
+            "leafFill": "#6f7b00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "6",
+        "children": [
+          {
+            "name": "6",
+            "size": 7000,
+            "leafFill": "#7e7800",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "7",
+        "children": [
+          {
+            "name": "7",
+            "size": 8000,
+            "leafFill": "#8d7400",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "8",
+        "children": [
+          {
+            "name": "8",
+            "size": 9000,
+            "leafFill": "#9c7000",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "9",
+        "children": [
+          {
+            "name": "9",
+            "size": 10000,
+            "leafFill": "#ab6a00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "10",
+        "children": [
+          {
+            "name": "10",
+            "size": 11000,
+            "leafFill": "#ba6300",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "11",
+        "children": [
+          {
+            "name": "11",
+            "size": 12000,
+            "leafFill": "#c95a00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "12",
+        "children": [
+          {
+            "name": "12",
+            "size": 13000,
+            "leafFill": "#d74f00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "13",
+        "children": [
+          {
+            "name": "13",
+            "size": 14000,
+            "leafFill": "#e54100",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "14",
+        "children": [
+          {
+            "name": "14",
+            "size": 15000,
+            "leafFill": "#f22e00",
+            "imgUrl": ""
+          }
+        ]
+      }
+    ]
+  }
+}
