@@ -1,0 +1,376 @@
+{
+  "attributes": {
+    "title": "37 circles scale on both size and color",
+    "description": "Data example to show the data structure",
+    "colorRange": [
+      "white"
+    ],
+    "leafFill": "green"
+  },
+  "data": {
+    "name": "This will NOT show anywhere!",
+    "children": [
+      {
+        "name": "0",
+        "children": [
+          {
+            "name": "0",
+            "size": 1000,
+            "leafFill": "#0000ff",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "1",
+        "children": [
+          {
+            "name": "1",
+            "size": 2000,
+            "leafFill": "#5d00f8",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "children": [
+          {
+            "name": "2",
+            "size": 3000,
+            "leafFill": "#8300f1",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "children": [
+          {
+            "name": "3",
+            "size": 4000,
+            "leafFill": "#9f00e8",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "4",
+        "children": [
+          {
+            "name": "4",
+            "size": 5000,
+            "leafFill": "#b600df",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "5",
+        "children": [
+          {
+            "name": "5",
+            "size": 6000,
+            "leafFill": "#cb00d6",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "6",
+        "children": [
+          {
+            "name": "6",
+            "size": 7000,
+            "leafFill": "#dc00cc",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "7",
+        "children": [
+          {
+            "name": "7",
+            "size": 8000,
+            "leafFill": "#ec00c2",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "8",
+        "children": [
+          {
+            "name": "8",
+            "size": 9000,
+            "leafFill": "#fa00b8",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "9",
+        "children": [
+          {
+            "name": "9",
+            "size": 10000,
+            "leafFill": "#ff00ae",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "10",
+        "children": [
+          {
+            "name": "10",
+            "size": 11000,
+            "leafFill": "#ff00a3",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "11",
+        "children": [
+          {
+            "name": "11",
+            "size": 12000,
+            "leafFill": "#ff0099",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "12",
+        "children": [
+          {
+            "name": "12",
+            "size": 13000,
+            "leafFill": "#ff008f",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "13",
+        "children": [
+          {
+            "name": "13",
+            "size": 14000,
+            "leafFill": "#ff0085",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "14",
+        "children": [
+          {
+            "name": "14",
+            "size": 15000,
+            "leafFill": "#ff007b",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "15",
+        "children": [
+          {
+            "name": "15",
+            "size": 16000,
+            "leafFill": "#ff0071",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "16",
+        "children": [
+          {
+            "name": "16",
+            "size": 17000,
+            "leafFill": "#ff0067",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "17",
+        "children": [
+          {
+            "name": "17",
+            "size": 18000,
+            "leafFill": "#ff005e",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "18",
+        "children": [
+          {
+            "name": "18",
+            "size": 19000,
+            "leafFill": "#ff0054",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "19",
+        "children": [
+          {
+            "name": "19",
+            "size": 20000,
+            "leafFill": "#ff004b",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "20",
+        "children": [
+          {
+            "name": "20",
+            "size": 21000,
+            "leafFill": "#ff0042",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "21",
+        "children": [
+          {
+            "name": "21",
+            "size": 22000,
+            "leafFill": "#ff3138",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "22",
+        "children": [
+          {
+            "name": "22",
+            "size": 23000,
+            "leafFill": "#ff4a2d",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "23",
+        "children": [
+          {
+            "name": "23",
+            "size": 24000,
+            "leafFill": "#ff5e20",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "24",
+        "children": [
+          {
+            "name": "24",
+            "size": 25000,
+            "leafFill": "#ff6e0f",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "25",
+        "children": [
+          {
+            "name": "25",
+            "size": 26000,
+            "leafFill": "#ff7d00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "26",
+        "children": [
+          {
+            "name": "26",
+            "size": 27000,
+            "leafFill": "#ff8b00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "27",
+        "children": [
+          {
+            "name": "27",
+            "size": 28000,
+            "leafFill": "#ff9800",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "28",
+        "children": [
+          {
+            "name": "28",
+            "size": 29000,
+            "leafFill": "#ffa400",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "29",
+        "children": [
+          {
+            "name": "29",
+            "size": 30000,
+            "leafFill": "#ffb000",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "30",
+        "children": [
+          {
+            "name": "30",
+            "size": 31000,
+            "leafFill": "#ffbb00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "31",
+        "children": [
+          {
+            "name": "31",
+            "size": 32000,
+            "leafFill": "#ffc600",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "32",
+        "children": [
+          {
+            "name": "32",
+            "size": 33000,
+            "leafFill": "#ffd000",
+            "imgUrl": ""
+          }
+        ]
+      },
+
