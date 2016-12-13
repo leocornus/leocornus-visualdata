@@ -1,0 +1,208 @@
+{
+  "attributes": {
+    "title": "16 + 1 circles",
+    "description": "Example to show the data structure: 16 equal size circles and 1 half size circle. The small one will be in the center.",
+    "colorRange": [
+      "white",
+      "hsl(228,30%,40%)"
+    ],
+    "leafFill": "lightgrey"
+  },
+  "data": {
+    "name": "This will NOT show anywhere!",
+    "children": [
+      {
+        "name": "Description for big circle",
+        "children": [
+          {
+            "name": "00",
+            "children": [
+              {
+                "name": "Circle Zero",
+                "size": 500,
+                "imgRatio": 1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "01",
+            "children": [
+              {
+                "name": "Circle One",
+                "size": 1000,
+                "imgRatio": 1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "02",
+            "children": [
+              {
+                "name": "Circle Two",
+                "size": 1000,
+                "imgRatio": 1.1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "03",
+            "children": [
+              {
+                "name": "Circle Three",
+                "size": 1000,
+                "imgRatio": 1.15,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "04",
+            "children": [
+              {
+                "name": "Circle Four",
+                "size": 1000,
+                "imgRatio": 1.2,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "05",
+            "children": [
+              {
+                "name": "Circle Five",
+                "size": 1000,
+                "imgRatio": 1.25,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "06",
+            "children": [
+              {
+                "name": "Circle Six",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "07",
+            "children": [
+              {
+                "name": "Circle Seven",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "08",
+            "children": [
+              {
+                "name": "Circle Eight",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "09",
+            "children": [
+              {
+                "name": "Circle Nine",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "10",
+            "children": [
+              {
+                "name": "Circle Ten",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "11",
+            "children": [
+              {
+                "name": "Circle Eleven",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "12",
+            "children": [
+              {
+                "name": "Circle Twelve",
+                "size": 1000,
+                "imgRatio": 1.5,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "13",
+            "children": [
+              {
+                "name": "Circle Thirteen",
+                "size": 1000,
+                "imgRatio": 1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "14",
+            "children": [
+              {
+                "name": "Circle Fourteen",
+                "size": 1000,
+                "imgRatio": 1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "15",
+            "children": [
+              {
+                "name": "Circle Fifteen",
+                "size": 1000,
+                "imgRatio": 1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          },
+          {
+            "name": "16",
+            "children": [
+              {
+                "name": "Circle Sixteen",
+                "size": 1000,
+                "imgRatio": 1,
+                "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Niveau_5.svg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
