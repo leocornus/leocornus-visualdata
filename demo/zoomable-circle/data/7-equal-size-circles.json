@@ -1,0 +1,92 @@
+{
+  "attributes": {
+    "title": "7 Equal size circles",
+    "description": "Data example to show the data structure",
+    "colorRange": [
+      "white"
+    ],
+    "leafFill": "green"
+  },
+  "data": {
+    "name": "This will NOT show anywhere!",
+    "children": [
+      {
+        "name": "0",
+        "children": [
+          {
+            "name": "0",
+            "size": 1000,
+            "leafFill": "#008000",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "1",
+        "children": [
+          {
+            "name": "1",
+            "size": 1000,
+            "leafFill": "#407f00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "children": [
+          {
+            "name": "2",
+            "size": 1000,
+            "leafFill": "#647c00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "children": [
+          {
+            "name": "3",
+            "size": 1000,
+            "leafFill": "#857600",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "4",
+        "children": [
+          {
+            "name": "4",
+            "size": 1000,
+            "leafFill": "#a56c00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "5",
+        "children": [
+          {
+            "name": "5",
+            "size": 1000,
+            "leafFill": "#c55d00",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "6",
+        "children": [
+          {
+            "name": "6",
+            "size": 1000,
+            "leafFill": "#e34400",
+            "imgUrl": ""
+          }
+        ]
+      }
+    ]
+  }
+}
