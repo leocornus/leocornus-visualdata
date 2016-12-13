@@ -1,0 +1,147 @@
+{
+  "attributes": {
+    "title": "12 minor scale size circles",
+    "description": "Data example to show the data structure, the minor different in size will make sure the order of the circles",
+    "colorRange": [
+      "white"
+    ],
+    "leafFill": "green"
+  },
+  "data": {
+    "name": "This will NOT show anywhere!",
+    "children": [
+      {
+        "name": "0",
+        "children": [
+          {
+            "name": "0",
+            "size": 1000,
+            "leafFill": "#0000ff",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "1",
+        "children": [
+          {
+            "name": "1",
+            "size": 1001,
+            "leafFill": "#7900ed",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "children": [
+          {
+            "name": "2",
+            "size": 1002,
+            "leafFill": "#a600d8",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "children": [
+          {
+            "name": "3",
+            "size": 1003,
+            "leafFill": "#c500c3",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "4",
+        "children": [
+          {
+            "name": "4",
+            "size": 1004,
+            "leafFill": "#dc00ac",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "5",
+        "children": [
+          {
+            "name": "5",
+            "size": 1005,
+            "leafFill": "#ee0096",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "6",
+        "children": [
+          {
+            "name": "6",
+            "size": 1006,
+            "leafFill": "#fa0080",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "7",
+        "children": [
+          {
+            "name": "7",
+            "size": 1007,
+            "leafFill": "#ff006b",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "8",
+        "children": [
+          {
+            "name": "8",
+            "size": 1008,
+            "leafFill": "#ff0058",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "9",
+        "children": [
+          {
+            "name": "9",
+            "size": 1009,
+            "leafFill": "#ff0045",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "10",
+        "children": [
+          {
+            "name": "10",
+            "size": 1010,
+            "leafFill": "#ff0032",
+            "imgUrl": ""
+          }
+        ]
+      },
+      {
+        "name": "11",
+        "children": [
+          {
+            "name": "11",
+            "size": 1011,
+            "leafFill": "#ff001f",
+            "imgUrl": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -7,6 +7,7 @@
     "data/simple-circles.json",
     "data/16-equal-1-half-size-circles.json",
     "data/12-equal-size-circles.json",
+    "data/12-minor-scale-size-circles.json",
     "data/7-equal-size-circles.json"
     "data/3-equal-size-circles.json"
   ],
@@ -18,6 +19,7 @@
      "Simple Circles",
      "16 + 1 Circles",
      "12 Equal Size Circles",
+     "12 Minor Scale Size Circles",
      "7 Equal Size Circles"
      "3 Equal Size Circles"
   ]
