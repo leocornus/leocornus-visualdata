@@ -1,6 +1,6 @@
 {
   "name": "leocornus-visualdata",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "JavaScript libs to make data visulization simpler and easier!",
   "main": "index.js",
   "scripts": {
