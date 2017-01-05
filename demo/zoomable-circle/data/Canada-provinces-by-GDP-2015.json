@@ -5,7 +5,7 @@
     "dataSource": "https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_gross_domestic_product",
     "colorRange": [
       "white",
-      "white"
+      "#afe9af"
     ],
     "leafFill": "#87de87"
   },
