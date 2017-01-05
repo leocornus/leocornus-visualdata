@@ -7,7 +7,7 @@
       "white",
       "white"
     ],
-    "leafFill": "#f2cfdb"
+    "leafFill": "#87de87"
   },
   "data": {
     "name": "Canadian provinces and territories by GDP 2015",
@@ -20,6 +20,7 @@
             {
               "name": "British Columbia: $249,981M",
               "size": 249981,
+              "leafFill": "#217821",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Coat_of_Arms_of_British_Columbia.svg"
             }
           ]
@@ -40,6 +41,7 @@
             {
               "name": "Alberta: $326,433M",
               "size": 326433,
+              "leafFill": "#165016",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/en/c/c7/Alberta_coat_of_arms.svg"
             }
           ]
@@ -70,6 +72,7 @@
             {
               "name": "Saskatchewan: $79,415M",
               "size": 79415,
+              "leafFill": "#2ca02c",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/en/2/26/Coat_of_Arms_of_Saskatchewan.svg"
             }
           ]
@@ -80,6 +83,7 @@
             {
               "name": "Manitoba: $65,862M",
               "size": 65862,
+              "leafFill": "#2ca02c",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Coat_of_arms_of_Manitoba.svg"
             }
           ]
@@ -90,6 +94,7 @@
             {
               "name": "Ontario: $763,276M",
               "size": 763276,
+              "leafFill": "#0b280b",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Coat_of_Arms_of_Ontario.png"
             }
           ]
@@ -100,6 +105,7 @@
             {
               "name": "Quebec: $380,972M",
               "size": 380972,
+              "leafFill": "#165016",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Armoiries_du_Qu%C3%A9bec.svg"
             }
           ]
@@ -110,6 +116,7 @@
             {
               "name": "New Brunswick: $33,052M",
               "size": 33052,
+              "leafFill": "#37c837",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/en/5/55/NewBrunswick_CoatOfArms.png"
             }
           ]
@@ -120,6 +127,7 @@
             {
               "name": "Nova Scotia: $40,225M",
               "size": 40225,
+              "leafFill": "#37c837",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Coat_of_arms_of_Nova_Scotia.svg"
             }
           ]
@@ -140,6 +148,7 @@
             {
               "name": "Newfoundland and Labrador: $30,100M",
               "size": 30100,
+              "leafFill": "#37c837",
               "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Coat_of_Arms_of_Newfoundland_and_Labrador.svg"
             }
           ]
