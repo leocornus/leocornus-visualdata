@@ -1,0 +1,150 @@
+{
+  "attributes": {
+    "title": "Canadian provinces and territories by GDP 2015",
+    "description": "A table of Canadian provinces and territories by descending GDP (at current price and expenditure-based); all figures are from Statistics Canada.",
+    "dataSource": "https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_gross_domestic_product",
+    "colorRange": [
+      "red",
+      "red"
+    ],
+    "leafFill": "#f2cfdb"
+  },
+  "data": {
+    "name": "Canadian provinces and territories by GDP 2015",
+    "children": [{
+      "name": "Canada GDP in 2015: $1,986,193M",
+      "children": [
+        {
+          "name": "BC $250B",
+          "children": [
+            {
+              "name": "British Columbia: 239",
+              "size": 249981,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Coat_of_Arms_of_British_Columbia.svg"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {
+              "name": "Yukon: 1",
+              "size": 1,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Coat_of_arms_of_Yukon.svg"
+            }
+          ]
+        },
+        {
+          "name": "AB $326B",
+          "children": [
+            {
+              "name": "Alberta: $326B",
+              "size": 234,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/en/c/c7/Alberta_coat_of_arms.svg"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {
+              "name": "Northwest Territories: 1",
+              "size": 1,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Coat_of_arms_of_Northwest_Territories.svg"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {
+              "name": "Nunavut: 1",
+              "size": 1,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/en/c/cd/Coat_of_Arms_of_Nunavut.png"
+            }
+          ]
+        },
+        {
+          "name": "SK 163",
+          "children": [
+            {
+              "name": "Saskatchewan: 163",
+              "size": 163,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/en/2/26/Coat_of_Arms_of_Saskatchewan.svg"
+            }
+          ]
+        },
+        {
+          "name": "MB 105",
+          "children": [
+            {
+              "name": "Manitoba: 105",
+              "size": 105,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Coat_of_arms_of_Manitoba.svg"
+            }
+          ]
+        },
+        {
+          "name": "ON 842",
+          "children": [
+            {
+              "name": "Ontario: 842",
+              "size": 842,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Coat_of_Arms_of_Ontario.png"
+            }
+          ]
+        },
+        {
+          "name": "QC 473",
+          "children": [
+            {
+              "name": "Quebec: 473",
+              "size": 473,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Armoiries_du_Qu%C3%A9bec.svg"
+            }
+          ]
+        },
+        {
+          "name": "NB",
+          "children": [
+            {
+              "name": "New Brunswick: 9",
+              "size": 9,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/en/5/55/NewBrunswick_CoatOfArms.png"
+            }
+          ]
+        },
+        {
+          "name": "NS",
+          "children": [
+            {
+              "name": "Nova Scotia: 17",
+              "size": 17,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Coat_of_arms_of_Nova_Scotia.svg"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {
+              "name": "Prince Edward Island: 0",
+              "size": 0,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/en/e/e9/Coat_of_Arms_of_Prince_Edward_Island.png"
+            }
+          ]
+        },
+        {
+          "name": "NL",
+          "children": [
+            {
+              "name": "Newfoundland and Labrador: 11",
+              "size": 11,
+              "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Coat_of_Arms_of_Newfoundland_and_Labrador.svg"
+            }
+          ]
+        }
+      ]
+    }]
+  }
+}

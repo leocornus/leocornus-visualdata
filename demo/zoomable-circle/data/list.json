@@ -1,5 +1,6 @@
 {
   "datalist": [
+    "data/Canada-provinces-by-GDP-2015.json",
     "data/hiv-aids-in-Canada-2015.json",
     "data/canada-national-bird-vote.json",
     "data/opspedia-overview-in-circles.json",
@@ -14,6 +15,7 @@
     "data/3-equal-size-circles.json"
   ],
   "labelList": [
+     "Canadian provinces and territories by GDP",
      "HIV and AIDS in Canada 2015",
      "Canada national bird vote",
      "OPSpedia Overview (Technology)",
