@@ -6,7 +6,7 @@ JavaScript libraries to make data visualization simpler and easier.
 
 ## Live Demo
 
-[zoomable circles] (https://seanchen.github.io/visual/zoomable-circle/index-list.html)
+[zoomable circles](https://seanchen.github.io/visual/zoomable-circle/index-list.html)
 
 ## Quick Start
 
