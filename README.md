@@ -2,11 +2,13 @@
 
 JavaScript libraries to make data visualization simpler and easier.
 
-# Live Demo
+[![NPM version][npm-image]][npm-url] [![NPM License][license-image]][npm-url] 
+
+## Live Demo
 
 [zoomable circles] (https://seanchen.github.io/visual/zoomable-circle/index-list.html)
 
-# Quick Start
+## Quick Start
 
 It is very easy to get started to explore those cool demos.
 
@@ -19,3 +21,7 @@ $ npm run express-app
 ```
 
 Then you could visit http://localhost:8900/demo for all examples.
+
+[npm-url]: https://www.npmjs.com/package/leocornus-visualdata
+[npm-image]: https://img.shields.io/npm/v/leocornus-visualdata.svg
+[license-image]: https://img.shields.io/npm/l/leocornus-visualdata.svg
