@@ -1,6 +1,6 @@
 {
   "name": "leocornus-visualdata",
-  "description": "JavaScript libs to make data visulization simpler and easier!",
+  "description": "JavaScript libs to make data visualization simpler and easier!",
   "main": "index.js",
   "authors": [
     "Sean Chen <sean.chen@leocorn.com>"

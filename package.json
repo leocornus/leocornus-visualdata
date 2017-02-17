@@ -1,7 +1,7 @@
 {
   "name": "leocornus-visualdata",
   "version": "0.0.7",
-  "description": "JavaScript libs to make data visulization simpler and easier!",
+  "description": "JavaScript libs to make data visualization simpler and easier!",
   "main": "index.js",
   "scripts": {
     "express-app": "gulp express-app",
@@ -13,7 +13,7 @@
   },
   "keywords": [
     "data",
-    "visulization",
+    "visualization",
     "JavaScript"
   ],
   "author": "Sean Chen <sean.chen@leocorn.com>",
