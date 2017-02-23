@@ -96,13 +96,16 @@ jQuery(document).ready(function($) {
         // get step length.
         var stepLength = parseInt($('#stepLength').val());
 
+        // try to calculate the total amout for circles.
+        circleAmount = (totalSize - stepLength) / (stepLength * 3);
+
         // using the category 20 for quick demo. 
         var color = d3.scale.category20();
         // preparing the circles.
         var circles = [];
         for(var i = 0; i < circleAmount; i++) {
             var name = '' + i;
-            var size = (i + 1) * stepLength;
+            var size = i == 0 ? stepLength : (i + 1) * stepLength * 3;
             var circle = {
               "name": name,
               "children":[{
