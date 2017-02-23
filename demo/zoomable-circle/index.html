@@ -118,7 +118,25 @@
 <!-- accordion panel group -->
 <div class="panel-group" id="accordion" role"tablist">
 
-  <!-- Strategy -->
+  <div class="panel panel-default">
+    <div class="panel-heading accordion-toggle collapsed" 
+         data-toggle="collapse" data-parent="#accordion" 
+         data-target="#collapseScale"
+         role="tab" id="headingScale">
+      <h4 class="panel-title">
+        Dynamic Scale
+      </h4>
+    </div>
+    <div id="collapseScale" class="panel-collapse collapse" 
+         role="tabpanel" aria-labelledby="headingScale">
+      <div class="no-panel-body">
+        <!-- scale dashboard -->
+        <div id="scaleDashboard"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example data -->
   <div class="panel panel-default">
     <div class="panel-heading accordion-toggle" 
          data-toggle="collapse" data-parent="#accordion" 
@@ -244,6 +262,12 @@
     <h2>Design Ideas</h2>
     <div class="panel panel-info">
       <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+          <p class="h4">Dynamic Scale Panel Design</p>
+          Try to control the position of each circle by 
+          automatically and dynamically 
+          scale the size of each circle.
+        </li>
         <li class="list-group-item list-group-item-warning">
           <p class="h4">Control Panel Design</p>
           layout, logo, branding, 

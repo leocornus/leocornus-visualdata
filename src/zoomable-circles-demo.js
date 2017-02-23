@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
     // load the JSON editor
     var editor = new JSONEditor(container, {});
 
-    // load the datalist:
+    // load the example datalist:
     $.getJSON('data/list.json', function(data) {
 
         var dataList = data.datalist;
