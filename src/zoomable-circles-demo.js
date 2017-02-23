@@ -79,6 +79,71 @@ jQuery(document).ready(function($) {
         // show full screen
         toggleFullScreen(document.getElementById('svgpreview'));
     });
+
+    //============================================================
+    // tools for dynamic scale panel.
+    //============================================================
+
+    /**
+     * generate dynamically scaled circles.
+     */
+    $('#generate').on('click', function() {
+
+        // get the total size.
+        var totalSize = parseInt($('#totalSize').val());
+        // get amount of circles.
+        var circleAmount = parseInt($('#circleAmount').val());
+        // get step length.
+        var stepLength = parseInt($('#stepLength').val());
+
+        // using the category 20 for quick demo. 
+        var color = d3.scale.category20();
+        // preparing the circles.
+        var circles = [];
+        for(var i = 0; i < circleAmount; i++) {
+            var name = '' + i;
+            var size = (i + 1) * stepLength;
+            var circle = {
+              "name": name,
+              "children":[{
+                "name": name + '-' + size,
+                "size": size,
+                "leafFill": color(i),
+                "imgUrl": ''
+              }]
+            };
+
+            circles.push(circle);
+        }
+
+        var jsonData = {
+          "attributes": {
+            "title": "3 Equal size circles",
+            "description": "Data example to show the data structure",
+            "dataSource": '',
+            "colorRange": [
+              "white"
+            ],
+            "leafFill": "green"
+          },
+          "data": {
+            "name":"This will NOT show anywhere!",
+            "children": circles
+          }
+        };
+
+        editor.set(jsonData);
+        // remove the existing one.
+        $('#svgpreview').empty();
+        // rebuild the circles.
+        var options = {
+          "margin":20,
+          "diameter":500
+        };
+        // draw the zoomable circles.
+        $("#svgpreview").zoomableCircles(options, jsonData);
+        $('#jsonstring').html(JSON.stringify(editor.get(), null, 2));
+    });
 });
 
 /**
