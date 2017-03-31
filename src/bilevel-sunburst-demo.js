@@ -49,7 +49,11 @@
 
 jQuery(document).ready(function($) {
 
-    $('#sunburst').bilevelSunburst({}, {});
+    // load the example datalist:
+    $.getJSON('data/week-2017-03-12-sunburst.json', function(data) {
+
+        $('#sunburst').bilevelSunburst({}, data); 
+    });
 
 /**
  * bs prefix stands for bilevel sunburst.
@@ -265,7 +269,7 @@ function key(d) {
 
 function fill(d) {
   var p = d;
-  //while (p.depth > 1) p = p.parent;
+  while (p.depth > 1) p = p.parent;
   var c = d3.lab(hue(p.name));
   c.l = luminance(d.sum);
   return c;
