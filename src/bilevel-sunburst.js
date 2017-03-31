@@ -2,7 +2,7 @@
  * create the jQuery plugin bilevelSunburst, it will be very simple
  * to use:
  *
- *  jQuery('circle-div-id').bilevelSunburst(options, jsonData);
+ *  jQuery('#circle-div-id').bilevelSunburst(options, jsonData);
  */
 
 ;(function($) {
@@ -70,6 +70,7 @@
 
             // save this id attribute.
             self.attrId = $element.attr('id');
+            $element.html("I am sunburst! I am comming up now...");
         },
 
         /**

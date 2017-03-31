@@ -49,6 +49,8 @@
 
 jQuery(document).ready(function($) {
 
+    $('#sunburst').bilevelSunburst({}, {});
+
 /**
  * bs prefix stands for bilevel sunburst.
  * the interface should be:
