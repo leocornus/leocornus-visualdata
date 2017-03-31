@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>D3 sunbust packing demo page</title>
+
+  <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.css'/>
+
+  <script src='/bower_components/jquery/dist/jquery.min.js'></script>
+  <script src='/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+
+  <script src='/bower_components/d3/d3.js'></script>
+  <script src='/src/bilevel-sunburst-demo.js'></script>
+
+<style>
+
+circle,
+path {
+  cursor: pointer;
+}
+
+circle {
+  fill: none;
+  pointer-events: all;
+}
+
+.bs-explanation {
+  position: absolute;
+  top: 305px;
+  left: 390px;
+  width: 180px;
+  text-align: center;
+  color: #666;
+  z-index: -1;
+  border: 0px solid black;
+}
+
+.bs-pageviews {
+  font-size: 2.5em;
+  color: #316395;
+}
+
+.bs-percentage {
+  font-size: 1.5em;
+  color: #316395;
+}
+
+.bs-date, .bs-group {
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="page-header"><h1>Bilevel Sunburst Demo</h1></div>
+
+  <div class="row" id="search-bar">
+    <div class="col-md-7" id="preview"></div>
+    <div class="col-md-5">Control Panel</div>
+  </div>
+</div>
+</body>
+</html>
