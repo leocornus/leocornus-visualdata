@@ -223,6 +223,8 @@ d3.json("data/week-" + bsDate + "-sunburst.json",
     }
 
     center.datum(root);
+    console.log("root");
+    console.log(root);
 
     // When zooming in, arcs enter from the outside and exit to the inside.
     // Entering outside arcs start from the old layout.

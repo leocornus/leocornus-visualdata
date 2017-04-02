@@ -71,6 +71,29 @@
             // save this id attribute.
             self.attrId = $element.attr('id');
             $element.html("I am sunburst! I am comming up now...");
+            // get ready the scale colors.
+            self.hue = d3.scale.category20c();
+            self.luminance = d3.scale.sqrt()
+                .domain([0, 1e6])
+                .clamp(true)
+                .range([90, 20]);
+
+            // get ready the d3.svg.arc object.
+            self.arc = d3.svg.arc()
+                .startAngle(function(d) { return d.x; })
+                .endAngle(function(d) { return d.x + d.dx ; })
+                .padAngle(.01)
+                //.padRadius(self.options.diameter / (2 * 3))
+                // 6 = 2 * 3, we are using diameter instead of 
+                // radius, 
+                .padRadius(self.options.diameter / 6)
+                .innerRadius(function(d) { 
+                    return self.options.diameter / 6 * d.depth; 
+                })
+                .outerRadius(function(d) { 
+                    return self.options.diameter / 6 * (d.depth + 1) - 1; 
+                });
+
             self.draw();
         },
 
@@ -111,22 +134,6 @@
                 .attr("transform", 
                        "translate(" + self.options.diameter/ 2 + 
                        "," + self.options.diameter/ 2 + ")");
-
-            // get ready the d3.svg.arc object.
-            self.arc = d3.svg.arc()
-                .startAngle(function(d) { return d.x; })
-                .endAngle(function(d) { return d.x + d.dx ; })
-                .padAngle(.01)
-                //.padRadius(self.options.diameter / (2 * 3))
-                // 6 = 2 * 3, we are using diameter instead of 
-                // radius, 
-                .padRadius(self.options.diameter / 6)
-                .innerRadius(function(d) { 
-                    return self.options.diameter / 6 * d.depth; 
-                })
-                .outerRadius(function(d) { 
-                    return self.options.diameter / 6 * (d.depth + 1) - 1; 
-                });
 
             // get ready the partition.
             self.partition = d3.layout.partition()
@@ -169,8 +176,8 @@
             self.center = self.svg.append("circle")
                 .attr("r", self.options.diameter / 6)
                 //.on("click", zoomOut);
-                .on("click", function() {
-                    self.zoomOut(this);
+                .on("click", function(d, i) {
+                    self.zoomOut(d);
                 });
             // add the title for tooltip.
             self.center.append("title")
@@ -192,8 +199,8 @@
                     this._current = self.updateArc(d); 
                 })
                 //.on("click", zoomIn);
-                .on("click", function() {
-                    self.zoomIn(this);
+                .on("click", function(d, i) {
+                    self.zoomIn(d);
                 });
             // add the tooltip
             self.path.append("title")
@@ -274,7 +281,17 @@
                 return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
             }
 
+function arcTween(b) {
+  var i = d3.interpolate(this._current, b);
+  this._current = i(0);
+  return function(t) {
+    return self.arc(i(t));
+  };
+}
+
             self.center.datum(newRoot);
+            console.log("newRoot");
+            console.log(newRoot);
 
             // When zooming in, 
             // arcs enter from the outside and exit to the inside.
@@ -320,8 +337,8 @@
                       .style("fill", function(d) { 
                           return d.fill; 
                       })
-                      .on("click", function() {
-                          self.zoomIn(this);
+                      .on("click", function(d, i) {
+                          self.zoomIn(d);
                       })
                       .each(function(d) { 
                           this._current = enterArc(d);
@@ -338,7 +355,7 @@
                   self.path.transition()
                       .style("fill-opacity", 1)
                       .attrTween("d", function(d) { 
-                          return self.arcTween.call(this, 
+                          return arcTween.call(this, 
                                                 self.updateArc(d)); 
                       });
               });
@@ -350,22 +367,17 @@
             while (p.depth) k.push(p.name), p = p.parent;
             return k.reverse().join(".");
         },
-        
+
         fill: function(d) {
 
-            // get ready colors.
-            var hue = d3.scale.category20c();
-            var luminance = d3.scale.sqrt()
-                .domain([0, 1e6])
-                .clamp(true)
-                .range([90, 20]);
+            var self = this;
 
             var p = d;
             //console.log(p);
             // set the leaf to use the parent's color.
             //while (p.depth > 1) p = p.parent;
-            var c = d3.lab(hue(p.name));
-            c.l = luminance(d.sum);
+            var c = d3.lab(self.hue(p.name));
+            c.l = self.luminance(d.sum);
 
             return c;
         },
@@ -376,9 +388,14 @@
 
         arcTween: function(b) {
 
+            var self = this;
+
+            console.log(self);
             var i = d3.interpolate(this._current, b);
             this._current = i(0);
+            //return self.arc(i(t));
             return function(t) {
+                console.log(self);
                 return self.arc(i(t));
             };
         }
