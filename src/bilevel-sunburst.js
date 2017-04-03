@@ -268,7 +268,7 @@
                   d.key = self.key(d);
                   d.fill = self.fill(d);
                 });
-            console.log(root);
+            //console.log(root);
             // after comupte, the root value will be the total value.
             self.totalValue = root.value;
             // update the explanation div.
@@ -412,8 +412,8 @@
             }
 
             self.center.datum(newRoot);
-            console.log("newRoot");
-            console.log(newRoot);
+            //console.log("newRoot");
+            //console.log(newRoot);
 
             // When zooming in, 
             // arcs enter from the outside and exit to the inside.
