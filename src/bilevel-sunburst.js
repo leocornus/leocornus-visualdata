@@ -161,6 +161,23 @@
 
             // calculate the location and offset.
 
+            // the largest rectangle that can be inscribed in a 
+            // circle is a square.
+
+            // calculate the offset for the center of the chart.
+            var offset = $('#' + self.getGenericId('svg')).offset();
+            var top = offset['top'] + self.options.diameter / 2;
+            var left = offset['left'] + self.options.diameter / 2;
+
+            // the center circle's the diameter is a third of the 
+            // self.options.diameter.
+            var centerRadius = self.options.diameter / 6;
+            var squareX = Math.sqrt(centerRadius * centerRadius / 2);
+
+            // top and left for the explanation div.
+            top = top - squareX;
+            left = left - squareX - 30;
+
             // the main explanation div.
             $('#' + self.getGenericId('explanation'))
               .css('position', 'absolute')
@@ -169,8 +186,8 @@
               // set the border, most time is for debugging..
               .css('border', '1px solid black')
               .css('width', '180px')
-              .css('top', '305px')
-              .css('left', '390px');
+              .css('top', top + 'px')
+              .css('left', left + 'px');
 
             $('#' + self.getGenericId('pageviews'))
               .css('font-size', '2.5em')
