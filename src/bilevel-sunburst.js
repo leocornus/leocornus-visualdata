@@ -162,7 +162,7 @@
             // calculate the location and offset.
 
             // the main explanation div.
-            $('#' + self.attrId + '-explanation')
+            $('#' + self.getGenericId('explanation'))
               .css('position', 'absolute')
               .css('text-align', 'center')
               .css('z-index', '-1')
@@ -172,21 +172,22 @@
               .css('top', '305px')
               .css('left', '390px');
 
-            $('#' + self.attrId + '-pageviews')
+            $('#' + self.getGenericId('pageviews'))
               .css('font-size', '2.5em')
               .css('color', '#316395');
 
-            $('#' + self.attrId + '-percentage')
+            $('#' + self.getGenericId('percentage'))
               .css('font-size', '1.5em')
               .css('color', '#316395');
-            $('#' + self.attrId + '-date')
+            $('#' + self.getGenericId('date'))
               .css('font-weight', 'bold');
-            $('#' + self.attrId + '-group')
+            $('#' + self.getGenericId('group'))
               .css('font-weight', 'bold');
         },
 
         /**
          * build the default explanation div.
+         * follow the generic id rule.
          */
         buildDefaultExplanation: function(prefix) {
 
@@ -209,9 +210,9 @@
             var self = this;
 
             // get ready the svg.
-            var bsSvgId = 'svgid-' + self.attrId;
             self.svg = d3.select('#' + self.attrId).append("svg")
-                .attr("id", bsSvgId)
+                // using the generic rule for the id.
+                .attr("id", self.getGenericId('svg'))
                 //.attr("width", margin.left + margin.right)
                 .attr('width', self.options.diameter)
                 //.attr("height", margin.top + margin.bottom)
@@ -449,6 +450,16 @@
                                                 self.updateArc(d)); 
                       });
               });
+        },
+
+        /**
+         * the generic rull to get ready the id.
+         * using the self.attrId as the prefix for the given name.
+         */
+        getGenericId: function(name) {
+
+            var self = this;
+            return self.attrId + '-' + name;
         },
 
         key: function(d) {
