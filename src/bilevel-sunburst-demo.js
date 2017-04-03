@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
     // load the example datalist:
     $.getJSON('data/week-2017-03-12-sunburst.json', function(data) {
 
-        $('#sunburst').bilevelSunburst({}, data); 
+        $('#sunburst').bilevelSunburst({date: "2017-03-12"}, data); 
     });
 
 /**

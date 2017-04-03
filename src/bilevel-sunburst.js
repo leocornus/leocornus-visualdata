@@ -86,6 +86,10 @@
                 .clamp(true)
                 .range([90, 20]);
 
+            // format number.
+            self.formatNumber = d3.format(",d");
+            self.formatPercentage = d3.format(".2%");
+
             // get ready the d3.svg.arc object.
             self.arc = d3.svg.arc()
                 .startAngle(function(d) { return d.x; })
@@ -184,7 +188,7 @@
               .css('text-align', 'center')
               .css('z-index', '-1')
               // set the border, most time is for debugging..
-              .css('border', '1px solid black')
+              .css('border', '0px solid black')
               .css('width', '180px')
               .css('top', top + 'px')
               .css('left', left + 'px');
@@ -267,6 +271,11 @@
             console.log(root);
             // after comupte, the root value will be the total value.
             self.totalValue = root.value;
+            // update the explanation div.
+            $('#' + self.getGenericId('date'))
+                .text(self.options.date);
+            $('#' + self.getGenericId('pageviews'))
+                .text(self.formatNumber(self.totalValue));
 
             // Now redefine the value function to use 
             // the previously-computed sum.
@@ -329,13 +338,21 @@
 
             //console.log("zoom in p.value = " + p.value);
             //console.log("zoom in p.name = " + p.name);
-            //$("#pageviews-" + bsId).text(formatNumber(p.value));
-            //$("#group-" + bsId).text(p.name);
-            //var percentage = 
-            //    Math.round10(p.value / bsTotal * 100, -2);
-            //$("#percentage-" + bsId).text(percentage + "%");
+            self.updateExplanation(p.value, p.name);
 
             self.zoom(p, p);
+        },
+
+        updateExplanation: function(pageviews, name) {
+
+            var self = this;
+
+            $("#" + self.getGenericId('pageviews'))
+                .text(self.formatNumber(pageviews));
+            $("#" + self.getGenericId("group")).text(name);
+            var percentage = pageviews / self.totalValue;
+            $("#" + self.getGenericId("percentage"))
+                .text(self.formatPercentage(percentage));
         },
 
         /**
@@ -351,11 +368,7 @@
             //console.log("zoom out p.value = " + p.parent.value);
             //console.log("zoom out p.name = " + p.parent.name);
             //console.log(p.parent);
-            //$("#pageviews-" + bsId).text(formatNumber(p.parent.sum));
-            //$("#group-" + bsId).text(p.parent.name);
-            //var percentage = 
-            //    Math.round10(p.parent.sum/ bsTotal * 100, -2);
-            //$("#percentage-" + bsId).text(percentage + "%");
+            self.updateExplanation(p.parent.sum, p.parent.name);
 
             self.zoom(p.parent, p);
         },
@@ -478,7 +491,7 @@
             var self = this;
             return self.attrId + '-' + name;
         },
-
+        
         key: function(d) {
 
             var k = [], p = d;
