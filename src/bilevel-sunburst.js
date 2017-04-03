@@ -319,9 +319,10 @@
             self.path.append("title")
                 .text(function(d) {
                     return d.name + "\n" + 
-                       //formatNumber(d.value) + " Pageviews\n" +
-                       //Math.round10((d.value / bsTotal) * 100, -2) + 
-                       "% of total pageviews";
+                       self.formatNumber(d.value) + 
+                       " Pageviews\n" +
+                       self.formatPercentage(d.value / self.totalValue) + 
+                       " of total pageviews";
                 });
         },
 
@@ -468,9 +469,10 @@
                   self.path.append("title")
                       .text(function(d) {
                           return d.name + "\n" + 
-                                 //formatNumber(d.value) + " Pageviews\n" +
-                                 //Math.round10((d.value / bsTotal) * 100, -2) + 
-                                 "% of total pageviews";
+                                 self.formatNumber(d.value) + 
+                                 " Pageviews\n" +
+                                 self.formatPercentage(d.value / self.totalValue) + 
+                                 " of total pageviews";
                       });
 
                   self.path.transition()
