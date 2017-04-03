@@ -11,8 +11,14 @@
     var pluginName = 'bilevelSunburst';
     // set the default options.
     var defaultOptions = {
-        "diameter" : 500,
-        "margin" : 10
+        // diameter of the sunburst, default is 500px
+        diameter: 500,
+        // margin for the sunburst, default is 10px
+        margin: 10,
+        // user customized way to build the explanation div.
+        // default is null, which will fall back to the built-in
+        // function to build the explanation.
+        explanationBuilder: null
     };
 
     /**
@@ -69,8 +75,10 @@
             var $element = $(this.element);
 
             // save this id attribute.
+            // it will be used as an unique id to identify this 
+            // bilevel sunburst chart.
             self.attrId = $element.attr('id');
-            $element.html("I am sunburst! I am comming up now...");
+            //$element.html("I am sunburst! I am comming up now...");
             // get ready the scale colors.
             self.hue = d3.scale.category20c();
             self.luminance = d3.scale.sqrt()
@@ -94,6 +102,9 @@
                     return self.options.diameter / 6 * (d.depth + 1) - 1; 
                 });
 
+            // append the explanation div.
+            self.appendExplanationDiv();
+            // draw the sunburst chart.
             self.draw();
         },
 
@@ -114,6 +125,46 @@
         },
 
         /**
+         * append the explanation div and the inline styles for it.
+         * the option explanationBuilder will be checked to 
+         * allow developer to customize the explanation div
+         * 
+         *  self.options.explanationBuilder(prefix);
+         */
+        appendExplanationDiv: function() {
+
+            var self = this;
+
+            var bsExplanation = '';
+            if(self.options.explanationBuilder) {
+                // call customized explanation builder.
+                bsExplanation = 
+                    self.options.explanationBuilder(self.attrId);
+            } else {
+                bsExplanation = 
+                    self.buildDefaultExplanation(self.attrId);
+            }
+
+            $('body').append(bsExplanation);
+        },
+
+        /**
+         * build the default explanation div.
+         */
+        buildDefaultExplanation: function(prefix) {
+
+            var divHtml =
+'<div id="' + prefix + '-explanation">' + 
+'  Day <span id="' + prefix + '-date"></span><br/>' +
+'  <span id="' + prefix + '-pageviews">40%</span><br/>' +
+'  Pageviews - <span id="' + prefix + '-group">All Pages</span><br/>' +
+'  <span id="' + prefix + '-percentage">100%</span>' +
+'</div>';
+
+            return divHtml;
+        },
+
+        /**
          * start drawing.
          */
         draw: function() {
@@ -121,8 +172,7 @@
             var self = this;
 
             // get ready the svg.
-            var bsId = Math.ceil((Math.random() * 100 + 100));
-            var bsSvgId = 'svgid-' + bsId;
+            var bsSvgId = 'svgid-' + self.attrId;
             self.svg = d3.select('#' + self.attrId).append("svg")
                 .attr("id", bsSvgId)
                 //.attr("width", margin.left + margin.right)
