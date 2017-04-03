@@ -120,7 +120,6 @@
 
             var self = this;
 
-
             // get ready the svg.
             var bsId = Math.ceil((Math.random() * 100 + 100));
             var bsSvgId = 'svgid-' + bsId;
@@ -278,16 +277,20 @@
             }
 
             function outsideArc(d) {
-                return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
+                return {
+                    depth: d.depth + 1, 
+                    x: outsideAngle(d.x), 
+                    dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)
+                    };
             }
 
-function arcTween(b) {
-  var i = d3.interpolate(this._current, b);
-  this._current = i(0);
-  return function(t) {
-    return self.arc(i(t));
-  };
-}
+            function arcTween(b) {
+                var i = d3.interpolate(this._current, b);
+                this._current = i(0);
+                return function(t) {
+                    return self.arc(i(t));
+                };
+            }
 
             self.center.datum(newRoot);
             console.log("newRoot");
@@ -375,7 +378,7 @@ function arcTween(b) {
             var p = d;
             //console.log(p);
             // set the leaf to use the parent's color.
-            //while (p.depth > 1) p = p.parent;
+            while (p.depth > 1) p = p.parent;
             var c = d3.lab(self.hue(p.name));
             c.l = self.luminance(d.sum);
 
@@ -383,21 +386,8 @@ function arcTween(b) {
         },
 
         updateArc: function(d) {
+
             return {depth: d.depth, x: d.x, dx: d.dx};
-        },
-
-        arcTween: function(b) {
-
-            var self = this;
-
-            console.log(self);
-            var i = d3.interpolate(this._current, b);
-            this._current = i(0);
-            //return self.arc(i(t));
-            return function(t) {
-                console.log(self);
-                return self.arc(i(t));
-            };
         }
     });
 
