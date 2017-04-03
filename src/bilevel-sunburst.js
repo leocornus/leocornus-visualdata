@@ -106,6 +106,8 @@
             self.appendExplanationDiv();
             // draw the sunburst chart.
             self.draw();
+            // apply the stles for explanation.
+            self.applyExplanationStyles();
         },
 
         /**
@@ -146,6 +148,41 @@
             }
 
             $('body').append(bsExplanation);
+        },
+
+        /**
+         * apply styles for the explanation div.
+         * this should happen after we have the location and offset
+         * of the svg.
+         */
+        applyExplanationStyles: function() {
+
+            var self = this;
+
+            // calculate the location and offset.
+
+            // the main explanation div.
+            $('#' + self.attrId + '-explanation')
+              .css('position', 'absolute')
+              .css('text-align', 'center')
+              .css('z-index', '-1')
+              // set the border, most time is for debugging..
+              .css('border', '1px solid black')
+              .css('width', '180px')
+              .css('top', '305px')
+              .css('left', '390px');
+
+            $('#' + self.attrId + '-pageviews')
+              .css('font-size', '2.5em')
+              .css('color', '#316395');
+
+            $('#' + self.attrId + '-percentage')
+              .css('font-size', '1.5em')
+              .css('color', '#316395');
+            $('#' + self.attrId + '-date')
+              .css('font-weight', 'bold');
+            $('#' + self.attrId + '-group')
+              .css('font-weight', 'bold');
         },
 
         /**
