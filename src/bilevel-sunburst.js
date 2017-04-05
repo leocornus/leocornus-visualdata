@@ -18,7 +18,11 @@
         // user customized way to build the explanation div.
         // default is null, which will fall back to the built-in
         // function to build the explanation.
-        explanationBuilder: null
+        explanationBuilder: null,
+        // styler
+        explanationStyler: null,
+        // updater, pass the whole data set as parameter.
+        explanationUpdater: null
     };
 
     /**
@@ -200,8 +204,10 @@
             $('#' + self.getGenericId('percentage'))
               .css('font-size', '1.5em')
               .css('color', '#316395');
+
             $('#' + self.getGenericId('date'))
               .css('font-weight', 'bold');
+
             $('#' + self.getGenericId('group'))
               .css('font-weight', 'bold');
         },
@@ -216,7 +222,8 @@
 '<div id="' + prefix + '-explanation">' + 
 '  Day <span id="' + prefix + '-date"></span><br/>' +
 '  <span id="' + prefix + '-pageviews">40%</span><br/>' +
-'  Pageviews - <span id="' + prefix + '-group">All Pages</span><br/>' +
+'  Pageviews - <span id="' + prefix + '-group">All Pages' +
+'</span><br/>' +
 '  <span id="' + prefix + '-percentage">100%</span>' +
 '</div>';
 
@@ -344,6 +351,12 @@
             self.zoom(p, p);
         },
 
+        /**
+         * update the explanation div.
+         * 
+         * TODO: Should allow user to update through the 
+         * self.options.explanationUpdater.
+         */
         updateExplanation: function(pageviews, name) {
 
             var self = this;
