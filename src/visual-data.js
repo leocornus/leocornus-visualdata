@@ -70,7 +70,9 @@
 
             var self = this;
             var $element = $(this.element);
-            $element.html("Here I am...");
+            self.attrId = $element.attr('id');
+            //$element.html("Here I am...");
+            self.buildDashboard();
         },
 
         /**
@@ -87,6 +89,38 @@
             self.options = $.extend({}, defaultOptions, options);
             self.jsonData = jsonData;
             self.init();
+        },
+
+        /**
+         * build the panel as dashboard.
+         */
+        buildDashboard: function() {
+
+            var self = this;
+
+            var panel =
+'<div class="panel panel-success">' +
+'  <div class="panel-heading">' +
+'    visual data dashboard mockups' +
+'  </div>' +
+'  <div class="panel-body">' +
+'    <div class="row">' +
+// the visual chart.
+'      <div class="col-md-8">' +
+'        <div id="preview">Visual Charts</div>' +
+'      </div>' +
+// the information column
+'      <div class="col-md-4">' +
+'        <div id="summary">Summary</div>' +
+'      </div>' +
+'    </div>' +
+'  </div>' +
+'  <div class="panel-footer">' +
+'    visual data footer mockups' +
+'  </div>' +
+'</div>';
+
+            $('#' + self.attrId).html(panel);
         }
     });
 
