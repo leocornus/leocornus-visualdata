@@ -11,10 +11,12 @@
     var pluginName = 'bilevelSunburst';
     // set the default options.
     var defaultOptions = {
-        // diameter of the sunburst, default is 500px
+        // diameter of the sunburst, 
+        // the default diameter is 500px
         diameter: 500,
-        // margin for the sunburst, default is 10px
-        margin: 10,
+        // margin for the sunburst, 
+        // the default margin is 5px
+        margin: 5,
         // user customized way to build the explanation div.
         // default is null, which will fall back to the built-in
         // function to build the explanation.
@@ -190,7 +192,13 @@
             $('#' + self.getGenericId('explanation'))
               .css('position', 'absolute')
               .css('text-align', 'center')
-              .css('z-index', '-1')
+              // The z-index property specifies the z-order of a 
+              // positioned element and its descendants. 
+              // When elements overlap, z-order determines 
+              // which one covers the other. 
+              // An element with a larger z-index 
+              // generally covers an element with a lower one.
+              .css('z-index', '2000')
               // set the border, most time is for debugging..
               .css('border', '0px solid black')
               .css('width', '180px')
