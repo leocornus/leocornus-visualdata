@@ -71,6 +71,10 @@
             var self = this;
             var $element = $(this.element);
             self.attrId = $element.attr('id');
+            // add the attribute ID as the prefix to 
+            // make the id unique.
+            self.options.chartId = self.attrId + '-chart';
+            self.options.summaryId = self.attrId + '-summary';
             //$element.html("Here I am...");
             self.buildDashboard();
         },
@@ -107,11 +111,11 @@
 '    <div class="row">' +
 // the visual chart.
 '      <div class="col-md-8">' +
-'        <div id="preview">Visual Charts</div>' +
+'        <div id="' + self.options.chartId + '">Charts</div>' +
 '      </div>' +
 // the information column
 '      <div class="col-md-4">' +
-'        <div id="summary">Summary</div>' +
+'        <div id="' + self.options.summaryId + '">Summary</div>' +
 '      </div>' +
 '    </div>' +
 '  </div>' +
@@ -121,6 +125,10 @@
 '</div>';
 
             $('#' + self.attrId).html(panel);
+
+            // Draw the chart,
+            $('#' + self.options.chartId).html('')
+              .bilevelSunburst({date: "2017-03-12"}, self.jsonData);
         }
     });
 
