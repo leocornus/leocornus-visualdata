@@ -76,6 +76,10 @@
             self.options.chartId = self.attrId + '-chart';
             self.options.summaryId = self.attrId + '-summary';
             //$element.html("Here I am...");
+            // process data:
+            //  - rule to group! generate the tree map data.
+            //  - calculate sub total, total
+            //  - sorting the data, group
             self.buildDashboard();
         },
 
@@ -97,6 +101,10 @@
 
         /**
          * build the panel as dashboard.
+         * Where is data from?
+         * 
+         * build the chart, using corresponding jQuery plugins
+         * create the summary
          */
         buildDashboard: function() {
 
