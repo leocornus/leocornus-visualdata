@@ -366,7 +366,7 @@
 
             // Draw the chart,
             $('#' + self.options.chartId).html('')
-              .bilevelSunburst({date: "2017-03-12"},
+              .bilevelSunburst({date: self.options.date},
                                self.treemapData);
             // create the summary and
         },
@@ -411,7 +411,7 @@
 
             // Draw the chart,
             $('#' + self.options.chartId).html('')
-              .bilevelSunburst({date: "2017-03-12"}, 
+              .bilevelSunburst({date: self.options.date}, 
                                self.treemapData);
             // create the summary and 
         },
