@@ -59,11 +59,40 @@ circle {
 
   <div class="page-header"><h1>Bilevel Sunburst Demo</h1></div>
 
-  <div class="row" id="search-bar">
-    <div class="col-md-7" id="preview"></div>
-    <div class="col-md-5">
-      <div id="sunburst">Control Panel</div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      Heading
     </div>
+    <div class="panel-body">
+      <div class="row" id="search-bar">
+        <div class="col-md-7" id="preview"></div>
+        <div class="col-md-5">
+          <div id="nosunburst">Control Panel</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      Footer
+    </div>
+  </div>
+
+  <!-- 
+  Media class works better with z-index.
+  it is also offers simple and easy style for a svg chart.
+  -->
+
+  <div class="row" id="search-bar">
+    <div class="col-md-8">
+      <div class="media">
+        <div class="media-left">
+          <div class="media-object" id="sunburst"></div>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Does this work?</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" id="nopreview"></div>
   </div>
 </div>
 </body>
