@@ -352,13 +352,13 @@
 
             var media =
 '<div class="media">' +
-'  <div class="media-left">' +
+'  <div class="media-body">' +
+'    <div id="' + self.options.summaryId + '">Summary</div>' +
+'  </div>' +
+'  <div class="media-right">' +
 // the visual chart as media-object.
 '    <div class="media-object" id="' +
       self.options.chartId + '">Charts</div>' +
-'  </div>' +
-'  <div class="media-body">' +
-'    <div id="' + self.options.summaryId + '">Summary</div>' +
 '  </div>' +
 '</div>';
 
