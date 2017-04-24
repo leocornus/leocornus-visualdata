@@ -125,6 +125,7 @@
             //  - calculate sub total, total
             //  - sorting the data, group
             self.buildDashboard();
+            self.buildSummary();
         },
 
         /**
@@ -352,13 +353,13 @@
 
             var media =
 '<div class="media">' +
-'  <div class="media-body">' +
-'    <div id="' + self.options.summaryId + '">Summary</div>' +
-'  </div>' +
-'  <div class="media-right">' +
+'  <div class="media-left">' +
 // the visual chart as media-object.
 '    <div class="media-object" id="' +
       self.options.chartId + '">Charts</div>' +
+'  </div>' +
+'  <div class="media-body">' +
+'    <div id="' + self.options.summaryId + '">Summary</div>' +
 '  </div>' +
 '</div>';
 
@@ -414,6 +415,102 @@
               .bilevelSunburst({date: self.options.date}, 
                                self.treemapData);
             // create the summary and 
+        },
+
+        /**
+         * utility function to build summary.
+         *
+         * TODO: this should allow developer to customize!
+         */
+        buildSummary: function() {
+
+            var self = this;
+            var summary = 
+                self.tableSummaryBuilder(self.groupsSummary,
+                                         self.pagesSummary, 
+                                         self.total);
+            $('#' + self.options.summaryId).html(summary);
+        },
+
+        /**
+         * create summary
+         */
+        tableSummaryBuilder: function(groupsSummary, pagesSummary, 
+                                      total) {
+
+            var summary = '';
+            var format = d3.format(',d');
+
+            // add number column by search and replace.
+            var groups = groupsSummary.map(function(group, index) {
+                if (index > 9) {
+                    return '';
+                }
+                return group.replace('<tr>', 
+                                '<tr><th>' + (index + 1) + '</th>');
+            });
+            var pages = pagesSummary.map(function(page, index) {
+                return page.replace('<tr>',
+                                '<tr><th>' + (index + 1) + '</th>');
+            });
+        
+            summary =
+'<div class="tab-content">' +
+'<div class="tab-pane active" id="groups" role="tabpanel">' +
+  '<table class="table table-hover">' +
+  '<caption>' +
+  'Top 10 Ministries by Pageviews' +
+  '</caption>' +
+  '<thead><tr>' + 
+  '  <th>#</th>' + 
+  '  <th>Ministry</th>' + 
+  '  <th>Pageviews</th>' + 
+  '  <th>Pages</th>' + 
+  //'  <th>Sites</th>' + 
+  '</tr></thead>' +
+  '<tbody>' +
+  groups.join('\n') +
+  '</tbody></table>' +
+'</div>' +
+'<div class="tab-pane" id="pages" role="tabpanel">' +
+  '<table class="table table-hover">' +
+  '<caption>' +
+  'Top 10 Pages by Pageviews' +
+  '</caption>' +
+  '<thead><tr>' + 
+  '  <th>#</th>' + 
+  '  <th>Page</th>' + 
+  '  <th>Pageviews</th>' + 
+  '  <th>Ministry</th>' + 
+  //'  <th>Sites</th>' + 
+  '</tr></thead>' +
+  '<tbody>' +
+  pages.join('\n') +
+  '</tbody></table>' +
+'</div>' +
+'</div>';
+
+            summary =
+//'<div class="col-md-6">' +
+'Total Pageviews: <strong>' + format(total[0]) + '</strong><br/>' +
+'Total Pages: <strong>' + format(total[1]) + '</strong><br/>' +
+'Total Sessions: <strong>' + format(total[3]) + '</strong><br/>' +
+'<ul class="nav nav-tabs" role="tablist">' +
+'  <li role="presentation" class="active">' +
+'    <a href="#groups" aria-controls="groups" role="tab"' +
+'       data-toggle="tab"' +
+'    >Top Ministries</a>' +
+'  </li>' +
+'  <li role="presentation">' +
+'    <a href="#pages" aria-controls="pages" role="tab"' +
+'       data-toggle="tab"' +
+'    >Top Pages</a>' +
+'  </li>' +
+'</ul>' +
+summary;
+//'</div>';
+        
+            return summary;
         },
 
         /**
