@@ -201,8 +201,11 @@
               // FIXME: seems we need use class to utilize the 
               // -1 z-index, which will help position 
               // the explanation div under the circle.
-              //.css('z-index', '2000')
-              .attr('class', 'bs-explanation')
+              .css('z-index', '-1')
+              // it turns out the bootstrap panel has something
+              // to do with the z-index.
+              // In general the z-index should work fine.
+              //.attr('class', 'bs-explanation')
               // set the border, most time is for debugging..
               .css('border', '0px solid black')
               .css('width', '180px')
