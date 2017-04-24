@@ -340,13 +340,48 @@
         },
 
         /**
+         * build the dashboard as media object.
+         *
+         * build the chart, using corresponding jQuery plugins
+         * create the summary
+         *
+         */
+        buildDashboard: function() {
+
+            var self = this;
+
+            var media =
+'<div class="media">' +
+'  <div class="media-left">' +
+// the visual chart as media-object.
+'    <div class="media-object" id="' +
+      self.options.chartId + '">Charts</div>' +
+'  </div>' +
+'  <div class="media-body">' +
+'    <div id="' + self.options.summaryId + '">Summary</div>' +
+'  </div>' +
+'</div>';
+
+            $('#' + self.attrId).html(media);
+
+            // Draw the chart,
+            $('#' + self.options.chartId).html('')
+              .bilevelSunburst({date: "2017-03-12"},
+                               self.treemapData);
+            // create the summary and
+        },
+
+        /**
          * build the panel as dashboard.
          * Where is data from?
          * 
          * build the chart, using corresponding jQuery plugins
          * create the summary
+         *
+         * FIXME: panel class NOT working well with z-index.
+         * panel class seems overlap the z-index most time.
          */
-        buildDashboard: function() {
+        buildDashboardPanel: function() {
 
             var self = this;
 
