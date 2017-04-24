@@ -198,7 +198,11 @@
               // which one covers the other. 
               // An element with a larger z-index 
               // generally covers an element with a lower one.
-              .css('z-index', '2000')
+              // FIXME: seems we need use class to utilize the 
+              // -1 z-index, which will help position 
+              // the explanation div under the circle.
+              //.css('z-index', '2000')
+              .attr('class', 'bs-explanation')
               // set the border, most time is for debugging..
               .css('border', '0px solid black')
               .css('width', '180px')
