@@ -438,6 +438,8 @@
         tableSummaryBuilder: function(groupsSummary, pagesSummary, 
                                       total) {
 
+            var self = this;
+
             var summary = '';
             var format = d3.format(',d');
 
@@ -456,7 +458,27 @@
         
             summary =
 '<div class="tab-content">' +
-'<div class="tab-pane active" id="groups" role="tabpanel">' +
+'<div class="tab-pane active" id="summary" role="tabpanel">' +
+  '<table class="table table-hover">' +
+  '<caption>' +
+  'All Traffic Summary' +
+  '</caption>' +
+  '<tbody>' +
+  '<tr>' +
+  '  <th>Total Pageviews:</th>' +
+  '  <td><strong>' + format(total[0]) + '</strong></td>' +
+  '</tr>' +
+  '<tr>' +
+  '  <th>Total Pages:</th>' +
+  '  <td><strong>' + format(total[1]) + '</strong></td>' +
+  '</tr>' +
+  '<tr>' +
+  '  <th>Total Sessions:</th>' +
+  '  <td><strong>' + format(total[3]) + '</strong></td>' +
+  '</tr>' +
+  '</tbody></table>' +
+'</div>' +
+'<div class="tab-pane" id="groups" role="tabpanel">' +
   '<table class="table table-hover">' +
   '<caption>' +
   'Top 10 Ministries by Pageviews' +
@@ -492,19 +514,22 @@
 
             summary =
 //'<div class="col-md-6">' +
-'Total Pageviews: <strong>' + format(total[0]) + '</strong><br/>' +
-'Total Pages: <strong>' + format(total[1]) + '</strong><br/>' +
-'Total Sessions: <strong>' + format(total[3]) + '</strong><br/>' +
+'<h4>Traffic report for day ' + self.options.date + '</h4>' +
 '<ul class="nav nav-tabs" role="tablist">' +
 '  <li role="presentation" class="active">' +
+'    <a href="#summary" aria-controls="summary" role="tab"' +
+'       data-toggle="tab"' +
+'    >Summary</a>' +
+'  </li>' +
+'  <li role="presentation">' +
 '    <a href="#groups" aria-controls="groups" role="tab"' +
 '       data-toggle="tab"' +
-'    >Top Ministries</a>' +
+'    >Ministries</a>' +
 '  </li>' +
 '  <li role="presentation">' +
 '    <a href="#pages" aria-controls="pages" role="tab"' +
 '       data-toggle="tab"' +
-'    >Top Pages</a>' +
+'    >Pages</a>' +
 '  </li>' +
 '</ul>' +
 summary;
