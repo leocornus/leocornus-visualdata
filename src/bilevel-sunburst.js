@@ -268,7 +268,7 @@
             // get ready the partition.
             self.partition = d3.layout.partition()
                 .sort(function(a, b) {
-                  return d3.ascending(a.name, b.name);
+                  return d3.ascending(a.size, b.size);
                 })
                 .size([2 * Math.PI, self.options.diameter / 2]);
 
