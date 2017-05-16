@@ -514,7 +514,6 @@
 
             summary =
 //'<div class="col-md-6">' +
-'<h4>Traffic report for day ' + self.options.date + '</h4>' +
 '<ul class="nav nav-tabs" role="tablist">' +
 '  <li role="presentation" class="active">' +
 '    <a href="#summary" aria-controls="summary" role="tab"' +
