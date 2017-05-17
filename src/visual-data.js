@@ -231,7 +231,8 @@
                 //     ]
                 //   }
                 // }
-                if(Object.keys(self.groups).indexOf(group) < 0) {
+                //if(Object.keys(self.groups).indexOf(group) < 0) {
+                if(!self.groups.hasOwnProperty(group)) {
                     // create the new group.
                     self.groups[group] = {};
                     self.groupsPageviews[group] = {};
@@ -239,7 +240,8 @@
                     self.groupsPageviews[group]['groupPageviews'] = 0;
                 }
                 // using the site as the key.
-                if(Object.keys(self.groups[group]).indexOf(site) < 0) {
+                //if(Object.keys(self.groups[group]).indexOf(site) < 0) {
+                if(!self.groups[group].hasOwnProperty(site)) {
                     // create the new site.
                     self.groups[group][site] = [];
                 }
