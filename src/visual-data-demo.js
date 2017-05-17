@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
     queue.defer(d3.json, "sunburst/data/day-2017-05-07.json");
     queue.defer(d3.json, "sunburst/data/day-2017-05-08.json");
     queue.defer(d3.json, "sunburst/data/day-2017-05-09.json");
+    queue.defer(d3.json, "sunburst/data/week-2017-03-12.json");
     queue.awaitAll(function(error, results) {
         if (error) {
             throw error;
@@ -20,7 +21,8 @@ jQuery(document).ready(function($) {
         var combinedData = {};
         theData.forEach(function(aPage, index) {
             path = aPage[0];
-            if(Object.keys(combinedData).indexOf(path) < 0) {
+            //if(Object.keys(combinedData).indexOf(path) < 0) {
+            if(!combinedData.hasOwnProperty(path)) {
                 combinedData[path] = aPage;
             } else {
                 combinedData[path] = [path,
