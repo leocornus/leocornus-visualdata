@@ -32,7 +32,15 @@ jQuery(document).ready(function($) {
                             combinedData[path][2] + aPage[2]];
             }
         });
-        theData = Object.values(combinedData);
+        if(typeof Object.values === "function") {
+            theData = Object.values(combinedData);
+        } else {
+            // IE
+            theData = [];
+            for(key in combinedData) {
+                theData.push(combinedData[key]);
+            }
+        }
         // sort by pageviews.
         theData = theData.sort(function(a, b) {
             return b[2] - a[2];
