@@ -44,7 +44,7 @@
           ["^/(mds)", "MDS"],
           ["^/(wiki)", "Wiki"],
           ["^/(customsearch|solrsearch)", "OPSpedia Search"],
-          ["^/(topical)", "Topical"],
+          ["^/topical/i", "Topical"],
           ["^/(tops|webcomm)", "Programs"]
         ]
     };
