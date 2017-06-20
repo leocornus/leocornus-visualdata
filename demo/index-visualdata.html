@@ -1,0 +1,99 @@
+<html>
+<head>
+  <title>Data Visualization Examples</title>
+
+  <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.css'/>
+
+  <script src='/bower_components/jquery/dist/jquery.min.js'></script>
+  <script src='/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+
+  <script src='/bower_components/d3/d3.js'></script>
+  <script src='/bower_components/d3-queue/d3-queue.js'></script>
+
+  <script src='/src/bilevel-sunburst.js'></script>
+  <script src='/src/visual-data.js'></script>
+  <script src='/src/visual-data-demo.js'></script>
+
+<style>
+
+circle,
+path {
+  cursor: pointer;
+}
+
+circle {
+  fill: none;
+  pointer-events: all;
+}
+
+/** don't need this for now.
+.bs-explanation {
+  color: #666;
+  z-index: -1;
+}
+*/
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="page-header"><h1 class="text-success">
+    <span class="glyphicon glyphicon-search" 
+          aria-hidden="true"></span> 
+    Visual Data Demo
+  </h1></div>
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#demo" aria-controls="demo" role="tab"
+         data-toggle="tab"
+      >Demo</a>
+    </li>
+
+    <li role="presentation">
+      <a href="#examples" aria-controls="examples" role="tab"
+         data-toggle="tab"
+      >Examples</a>
+    </li>
+  </ul>
+
+
+  <div class="tab-content">
+
+    <div class="tab-pane active" id="demo" role="tabpanel">
+      <h3 class="text-center">Visual Data Dashboard</h3>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+        <div id="visualdata" style="width:800px">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    visual data dashboard mockups
+  </div>
+  <div class="panel-body">
+    <div>Demo Div</div>
+  </div>
+  <div class="panel-footer">
+    visual data footer mockups
+  </div>
+</div>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="examples" role="tabpanel">
+      <ul>
+        <li><a href="zoomable-circle/index.html">zoomable circle</a></li>
+        <li><a href="sunburst/index.html">Sunburst</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
