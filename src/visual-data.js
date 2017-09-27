@@ -235,6 +235,7 @@
                     site = result[1];
                 }
 
+                // ======== Decide the group
                 // find the group and site for this page path.
                 // set the default group.
                 var group = 'Other Sites';
@@ -285,7 +286,7 @@
                 // add the page pageviews to group pageviews.
                 self.groupsPageviews[group]['groupPageviews'] += 
                     pagePageviews;
-                // sumamry for top 10 pages.
+                // Only create the summary for top 10 pages.
                 if(i < 10) {
                     // get ready the href link for page.
                     var pageUrl = pagePath.substring(0,8);
@@ -316,8 +317,12 @@
                 return b[1] - a[1];
             });
 
-            // the name, children structure.
+            // store the sorted groups list.
+            self.groupsPageviews = groupsInOrder;
+
+            // treemap: the name, children structure.
             self.groupsTreemap = [];
+            // we will build the groups summary at the same time.
             self.groupsSummary = [];
             for(var i = 0; i < groupsInOrder.length; i ++) {
 
@@ -657,8 +662,20 @@ summary;
         defaultInsightsFeeder: function(visualData) {
 
             var insightsList = 
-'<li class="list-group-item">The total page views: <strong>' +
-  visualData.total[0] + '</strong>' +
+'<li class="list-group-item">The site served' +
+'  <strong>' + visualData.total[0] + '</strong> total pageviews on' +
+'  <strong>' + visualData.total[1] + '</strong> pages of' +
+'  <strong>' + visualData.total[2] + '</strong> sites' +
+'</li>' +
+// the first group
+'<li class="list-group-item">The No. 1 group is <strong>' +
+  visualData.groupsPageviews[0][0] + '</strong>, which has <strong>' +
+  visualData.groupsPageviews[0][1] + '</strong> pageviews' +
+'</li>' +
+// the most viewed single page
+'<li class="list-group-item">The most views single page is <strong>' +
+  visualData.jsonData[0][0] + '</strong>, which has <strong>' +
+  visualData.jsonData[0][2] + '</strong> pageviews' +
 '</li>';
 
             $('#' + visualData.options.ids.insightsList).html(insightsList);
