@@ -212,6 +212,7 @@
             //var groupsSessions = {};
             self.totalSessions = 0;
             self.pagesSummary = [];
+            // NOTE: the data structure for total numbers
             // [pageviews, pages, sites, sessions]
             self.total = [0,0,0,0];
 
@@ -462,6 +463,9 @@ insightsPanel +
                                          self.pagesSummary, 
                                          self.total);
             $('#' + self.options.summaryId).html(summary);
+
+            // feed insights list.
+            self.feedInsights();
         },
 
         /**
@@ -622,7 +626,7 @@ summary;
 '<div class="panel panel-info">' +
 '  <div class="panel-heading" id="' + 
         visualData.options.ids.insightsHeading + '">' +
-'    Insights of the day:' +
+'    <h4>Insights of the day:</h4>' +
 '  </div>' +
 '  <ul class="list-group" id="' + visualData.options.ids.insightsList + '">' +
 '  </ul>' +
@@ -651,6 +655,13 @@ summary;
          * the default Insights feeder.
          */
         defaultInsightsFeeder: function(visualData) {
+
+            var insightsList = 
+'<li class="list-group-item">The total page views: <strong>' +
+  visualData.total[0] + '</strong>' +
+'</li>';
+
+            $('#' + visualData.options.ids.insightsList).html(insightsList);
         }
     });
 
