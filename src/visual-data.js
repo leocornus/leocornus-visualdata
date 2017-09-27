@@ -49,6 +49,22 @@
         ],
 
         /**
+         * the ids for the visualData plugin.
+         */
+        ids: {
+            /**
+             * this id will presend the div
+             * which will show the heading message for insights panel.
+             */
+            insightsHeading: 'insights-heading',
+            /**
+             * this id will present the div
+             * which will show the list of insights.
+             */
+            insightsList: 'insights-list'
+        },
+
+        /**
          * The builder function for InsightsPanel.
          * Default is null, which will be the defaultInsightsPanel.
          */
@@ -367,7 +383,7 @@
             var insightsPanel = self.buildInsightsPanel();
 
             var media =
-insightsPanel[0] +
+insightsPanel +
 '<div class="media">' +
 '  <div class="media-left">' +
 // the visual chart as media-object.
@@ -602,19 +618,17 @@ summary;
          */
         defaultInsightsPanel: function(visualData) {
 
-            var ids = ["insights-heading", 
-                       "insights-list"];
-
-            var panel = 
+            var panelHtml = 
 '<div class="panel panel-info">' +
-'  <div class="panel-heading" id="' + ids[0] + '">' +
+'  <div class="panel-heading" id="' + 
+        visualData.options.ids.insightsHeading + '">' +
 '    Insights of the day:' +
 '  </div>' +
-'  <ul class="list-group" id="' + ids[1] + '">' +
+'  <ul class="list-group" id="' + visualData.options.ids.insightsList + '">' +
 '  </ul>' +
 '</div>';
 
-            return [panel, ids];
+            return panelHtml;
         },
 
         /**
