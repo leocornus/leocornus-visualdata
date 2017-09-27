@@ -46,7 +46,19 @@
           ["^/(customsearch|solrsearch)", "OPSpedia Search"],
           ["^/topical/i", "Topical"],
           ["^/(tops|webcomm)", "Programs"]
-        ]
+        ],
+
+        /**
+         * The builder function for InsightsPanel.
+         * Default is null, which will be the defaultInsightsPanel.
+         */
+        insightsPanelBuilder: null,
+        /**
+         * the feeder function will add insights into the 
+         * insights panel. default is null, which will use
+         * the defaultInsightsFeeder
+         */
+        insightsFeeder: null
     };
 
     /**
@@ -352,8 +364,10 @@
         buildDashboard: function() {
 
             var self = this;
+            var insightsPanel = self.buildInsightsPanel();
 
             var media =
+insightsPanel[0] +
 '<div class="media">' +
 '  <div class="media-left">' +
 // the visual chart as media-object.
@@ -561,6 +575,68 @@ summary;
               '</tr>';
 
             return summary;
+        },
+
+        // =================================================================
+        // handle the insights panel builder and feeder.
+        // =================================================================
+
+        /**
+         * build the insights panel.
+         */
+        buildInsightsPanel: function() {
+
+            var self = this;
+
+            if(this.options.insightsPanelBuilder) {
+                // use the customize insights panel builder
+                return self.options.insightsPanelBuilder(self);
+            } else {
+                // using the default search box.
+                return self.defaultInsightsPanel(self);
+            }
+        },
+
+        /**
+         * the default Insights panel builder.
+         */
+        defaultInsightsPanel: function(visualData) {
+
+            var ids = ["insights-heading", 
+                       "insights-list"];
+
+            var panel = 
+'<div class="panel panel-info">' +
+'  <div class="panel-heading" id="' + ids[0] + '">' +
+'    Insights of the day:' +
+'  </div>' +
+'  <ul class="list-group" id="' + ids[1] + '">' +
+'  </ul>' +
+'</div>';
+
+            return [panel, ids];
+        },
+
+        /**
+         * feed insights.
+         */
+        feedInsights: function() {
+
+            var self = this;
+
+            if(this.options.insightsFeeder) {
+                // use the customize insights feeder
+                self.options.insightsFeeder(self);
+            } else {
+                // using the default insights feeder.
+                self.defaultInsightsFeeder(self);
+            }
+        },
+
+        /**
+         * the default Insights feeder.
+         */
+        defaultInsightsFeeder: function(visualData) {
         }
     });
 
