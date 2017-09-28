@@ -17,9 +17,11 @@
         // margin for the sunburst, 
         // the default margin is 5px
         margin: 5,
-        // user customized way to build the explanation div.
-        // default is null, which will fall back to the built-in
-        // function to build the explanation.
+        /**
+         * user customized way to build the explanation div.
+         * default is null, which will fall back to the built-in
+         * function to build the explanation.
+         */
         explanationBuilder: null,
         // styler
         explanationStyler: null,
@@ -186,7 +188,7 @@
 
             // top and left for the explanation div.
             top = top - squareX;
-            left = left - squareX - 30;
+            left = left - squareX - 25;
 
             // the main explanation div.
             $('#' + self.getGenericId('explanation'))
@@ -230,6 +232,7 @@
         /**
          * build the default explanation div.
          * follow the generic id rule.
+         * The events for mouse will update content by those ids.
          */
         buildDefaultExplanation: function(prefix) {
 
