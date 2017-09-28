@@ -152,8 +152,14 @@
             //  - set up the sunburst data structure.
             //  - calculate sub total, total
             //  - sorting the data, group
+
+            // build dashboard, which will refresh the page's HTML DOM object
             self.buildDashboard();
+            // feed in the summary and insights,
             self.buildSummary();
+            // draw chart at the end, so we could calculate
+            // the correct position (top and left offset).
+            self.drawChart();
         },
 
         /**
@@ -402,12 +408,6 @@ insightsPanel +
 '</div>';
 
             $('#' + self.attrId).html(media);
-
-            // Draw the chart,
-            $('#' + self.options.chartId).html('')
-              .bilevelSunburst({date: self.options.date},
-                               self.treemapData);
-            // create the summary and
         },
 
         /**
@@ -450,9 +450,22 @@ insightsPanel +
 
             // Draw the chart,
             $('#' + self.options.chartId).html('')
+              .bilevelSunburst({date: self.options.date},
+                               self.treemapData);
+        },
+
+        /**
+         * create this utility function to draw chart,
+         * we could use it whenever we need.
+         */
+        drawChart: function() {
+
+            var self = this;
+
+            // Draw the chart,
+            $('#' + self.options.chartId).html('')
               .bilevelSunburst({date: self.options.date}, 
                                self.treemapData);
-            // create the summary and 
         },
 
         /**
