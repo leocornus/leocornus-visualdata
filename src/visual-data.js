@@ -50,8 +50,18 @@
 
         /**
          * the ids for the visualData plugin.
+         * These ids will be attached with a prefix to make them unique.
+         * check the function getId for detail.
          */
         ids: {
+            /**
+             * the id for draw the chart.
+             */
+            chart: 'chart',
+            /**
+             * the id for summary of the data.
+             */
+            summary: 'summary',
             /**
              * this id will presend the div
              * which will show the heading message for insights panel.
@@ -141,10 +151,6 @@
             var self = this;
             var $element = $(this.element);
             self.attrId = $element.attr('id');
-            // add the attribute ID as the prefix to 
-            // make the id unique.
-            self.options.chartId = self.attrId + '-chart';
-            self.options.summaryId = self.attrId + '-summary';
             //$element.html("Here I am...");
             self.analyzeData();
             // TODO: process data:
@@ -160,6 +166,17 @@
             // draw chart at the end, so we could calculate
             // the correct position (top and left offset).
             self.drawChart();
+        },
+
+        /**
+         * return id for the given name.
+         * It basically attaches the element id as the prefix for 
+         * any id defined in options.ids property.
+         */
+        getId: function(idName) {
+
+            var self = this;
+            return self.attrId + '-' + self.options.ids[idName];
         },
 
         /**
@@ -400,10 +417,10 @@ insightsPanel +
 '  <div class="media-left">' +
 // the visual chart as media-object.
 '    <div class="media-object" id="' +
-      self.options.chartId + '">Charts</div>' +
+      self.getId('chart') + '">Charts</div>' +
 '  </div>' +
 '  <div class="media-body">' +
-'    <div id="' + self.options.summaryId + '">Summary</div>' +
+'    <div id="' + self.getId('summary') + '">Summary</div>' +
 '  </div>' +
 '</div>';
 
@@ -433,11 +450,11 @@ insightsPanel +
 '    <div class="row">' +
 // the visual chart.
 '      <div class="col-md-8">' +
-'        <div id="' + self.options.chartId + '">Charts</div>' +
+'        <div id="' + self.getId('chart') + '">Charts</div>' +
 '      </div>' +
 // the information column
 '      <div class="col-md-4">' +
-'        <div id="' + self.options.summaryId + '">Summary</div>' +
+'        <div id="' + self.getId('summary') + '">Summary</div>' +
 '      </div>' +
 '    </div>' +
 '  </div>' +
@@ -449,7 +466,7 @@ insightsPanel +
             $('#' + self.attrId).html(panel);
 
             // Draw the chart,
-            $('#' + self.options.chartId).html('')
+            $('#' + self.getId('chart')).html('')
               .bilevelSunburst({date: self.options.date},
                                self.treemapData);
         },
@@ -463,7 +480,7 @@ insightsPanel +
             var self = this;
 
             // Draw the chart,
-            $('#' + self.options.chartId).html('')
+            $('#' + self.getId('chart')).html('')
               .bilevelSunburst({date: self.options.date}, 
                                self.treemapData);
         },
@@ -480,7 +497,7 @@ insightsPanel +
                 self.tableSummaryBuilder(self.groupsSummary,
                                          self.pagesSummary, 
                                          self.total);
-            $('#' + self.options.summaryId).html(summary);
+            $('#' + self.getId('summary')).html(summary);
 
             // feed insights list.
             self.feedInsights();
@@ -643,10 +660,10 @@ summary;
             var panelHtml = 
 '<div class="panel panel-info">' +
 '  <div class="panel-heading" id="' + 
-        visualData.options.ids.insightsHeading + '">' +
+        visualData.getId('insightsHeading') + '">' +
 '    <h4>Insights of the day:</h4>' +
 '  </div>' +
-'  <ul class="list-group" id="' + visualData.options.ids.insightsList + '">' +
+'  <ul class="list-group" id="' + visualData.getId('insightsList') + '">' +
 '  </ul>' +
 '</div>';
 
@@ -691,7 +708,7 @@ summary;
   visualData.jsonData[0][2] + '</strong> pageviews' +
 '</li>';
 
-            $('#' + visualData.options.ids.insightsList).html(insightsList);
+            $('#' + visualData.getId('insightsList')).html(insightsList);
         }
     });
 
