@@ -152,6 +152,7 @@
             var $element = $(this.element);
             self.attrId = $element.attr('id');
             //$element.html("Here I am...");
+            // This is associated with dataAnalyzer.
             self.analyzeData();
             // TODO: process data:
             //  - rule to group! generate the tree map data.
@@ -160,11 +161,16 @@
             //  - sorting the data, group
 
             // build dashboard, which will refresh the page's HTML DOM object
+            // This is associated with dashboardBuilder.
             self.buildDashboard();
-            // feed in the summary and insights,
+            // once we have the dashboard we will build the summary for data
+            // This is associated with summaryBuilder.
             self.buildSummary();
+            // and feed the insights
+            self.feedInsights();
             // draw chart at the end, so we could calculate
             // the correct position (top and left offset).
+            // This is associated with chartPainter
             self.drawChart();
         },
 
@@ -474,6 +480,9 @@ insightsPanel +
         /**
          * create this utility function to draw chart,
          * we could use it whenever we need.
+         * For example, 
+         * after we re-arrange the dashboard, we will need re-draw the chart.
+         * the chart will re-calculate all positions.
          */
         drawChart: function() {
 
@@ -499,8 +508,6 @@ insightsPanel +
                                          self.total);
             $('#' + self.getId('summary')).html(summary);
 
-            // feed insights list.
-            self.feedInsights();
         },
 
         /**
