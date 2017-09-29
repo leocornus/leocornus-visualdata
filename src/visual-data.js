@@ -7,15 +7,22 @@
 
 ;(function($) {
 
-    // set the plugin name bilevelSunburst.
+    // set the plugin name visualData.
     var pluginName = 'visualData';
-    // set the default options.
+
+    /**
+     * set the default options.
+     * The default options will help understand:
+     * - how this plugin is designed
+     * - how to customize the plugin
+     */
     var defaultOptions = {
         // deminsion of the visual area, default is 500px
         width: 500,
         height: 500,
         // margin for the sunburst, default is 10px
         margin: 10,
+
         /**
          * group rules.
          */
@@ -74,17 +81,34 @@
             insightsList: 'insights-list'
         },
 
+        // Analyzers
+        // ========================
+        dataAnalyzer: null,
+        // TODO: group rules will be part of analyzer.
+
+        // Builders
+        // =======================
+        dashboardBuilder: null,
         /**
          * The builder function for InsightsPanel.
          * Default is null, which will be the defaultInsightsPanel.
          */
         insightsPanelBuilder: null,
+
+        // Feeders
+        // =======================
+        summaryFeeder: null,
+
         /**
          * the feeder function will add insights into the 
          * insights panel. default is null, which will use
          * the defaultInsightsFeeder
          */
-        insightsFeeder: null
+        insightsFeeder: null,
+
+        // Painters
+        // ========================
+        chartPainter: null
     };
 
     /**
