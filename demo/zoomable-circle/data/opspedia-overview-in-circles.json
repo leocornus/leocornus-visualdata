@@ -183,7 +183,7 @@
                             "name": "uWSGI",
                             "children":[{"name": "uWSGI",
                             "size": 1000,
-                            "imgUrl": "http://www.scopart.fr/wp-content/uploads/2012/10/uwsgi.png"
+                            "imgUrl": "https://www.20tab.com/media/article/image-top/u.png"
                         }]},
                         {
                             "name": "Git",
