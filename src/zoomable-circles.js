@@ -2,7 +2,7 @@
  * create the jQuery plugin zoomableCircles, it will be very simple
  * to use:
  *
- *  jQuery('circle-div-id').zoomableCircles();
+ *  jQuery('circle-div-id').zoomableCircles(options, data);
  */
 
 ;(function($) {
